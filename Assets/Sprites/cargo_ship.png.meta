@@ -1,0 +1,207 @@
+fileFormatVersion: 2
+guid: 117d0e8ad2b1be94da49a30ddec998ab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8558816146852385262
+    second: cargo_ship_0
+  - first:
+      213: 454676757061200757
+    second: cargo_ship_1
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.5, y: 0.39745763}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cargo_ship_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1025
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee1930360f507c670800000000000000
+      internalID: 8558816146852385262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cargo_ship_1
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 10
+        width: 289
+        height: 1029
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57b62400a165f4600800000000000000
+      internalID: 454676757061200757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: 108, y: 418.5}
+      - {x: 53, y: 515.5}
+      - {x: -64, y: 506.5}
+      - {x: -104, y: 440.5}
+      - {x: -109, y: -346.5}
+      - {x: -66, y: -412.5}
+      - {x: -25, y: -447.5}
+      - {x: 44, y: -443.5}
+      - {x: 73, y: -405.5}
+      - {x: 119, y: -339.5}
+    - - {x: -192, y: 506.5}
+      - {x: -192, y: 511.5}
+      - {x: -196, y: 518.5}
+      - {x: -213, y: 518.5}
+      - {x: -216, y: 515.5}
+      - {x: -216, y: 504.5}
+      - {x: -194, y: 504.5}
+    - - {x: -132, y: 453.5}
+      - {x: -116, y: 453.5}
+      - {x: -87, y: 453.5}
+      - {x: -132, y: 456.5}
+    customData: 
+    physicsShape:
+    - - {x: 93, y: -371.5}
+      - {x: 117, y: -291.5}
+      - {x: 113, y: 398.5}
+      - {x: 47, y: 511.5}
+      - {x: -43, y: 511.5}
+      - {x: -105, y: 398.5}
+      - {x: -115, y: 350.5}
+      - {x: -111, y: -338.5}
+      - {x: -49, y: -439.5}
+      - {x: 52, y: -439.5}
+    - - {x: -192, y: 509.5}
+      - {x: -195, y: 517.5}
+      - {x: -199, y: 518.5}
+      - {x: -213, y: 518.5}
+      - {x: -216, y: 511.5}
+      - {x: -216, y: 504.5}
+      - {x: -192, y: 504.5}
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      cargo_ship_0: 8558816146852385262
+      cargo_ship_1: 454676757061200757
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
