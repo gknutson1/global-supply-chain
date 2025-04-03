@@ -1,15 +1,31 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ButtonHover : MonoBehaviour
+public class ButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    TextMeshProUGUI text;
+    Color baseColor;
+    Color hoverColor = Color.white;
+
     void Start()
     {
+        text = GetComponentInChildren<TextMeshProUGUI>();
+        baseColor = text.color;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        
+        text.color = hoverColor;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        text.color = baseColor;
+    }
+
+    public void Test(Collider other)
+    {
+        print("Test");
     }
 }
