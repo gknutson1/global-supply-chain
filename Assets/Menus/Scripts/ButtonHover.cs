@@ -23,9 +23,4 @@ public class ButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         text.color = baseColor;
     }
-
-    public void Test(Collider other)
-    {
-        print("Test");
-    }
 }
