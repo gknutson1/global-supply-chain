@@ -531,7 +531,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 105, y: -700}
+  m_AnchoredPosition: {x: 100, y: -700}
   m_SizeDelta: {x: 850, y: 75}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &862858087599456047
@@ -691,8 +691,8 @@ MonoBehaviour:
   m_HandleRect: {fileID: 840934972689826343}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
+  m_MaxValue: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -721,7 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe09d35ff29c8d8c9929c6582f938cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultValue: 100
+  defaultValue: 1
 --- !u!1 &1230134241939614576
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,7 +907,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 105, y: -775}
+  m_AnchoredPosition: {x: 100, y: -775}
   m_SizeDelta: {x: 850, y: 75}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &1515093549679226209
@@ -1151,6 +1151,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: OptionToggle, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1404,8 +1416,8 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7705332697388438079}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
+  m_MaxValue: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1434,7 +1446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe09d35ff29c8d8c9929c6582f938cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultValue: 100
+  defaultValue: 1
 --- !u!1 &2481564464217275691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1607,6 +1619,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: OptionToggle, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!114 &5430630419043634010
 MonoBehaviour:
@@ -1740,6 +1764,7 @@ GameObject:
   - component: {fileID: 6778680488986106614}
   - component: {fileID: 1758333007460306906}
   - component: {fileID: 2986716868573870104}
+  - component: {fileID: 7285586758758769922}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1865,6 +1890,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7285586758758769922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2741629832657659541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &2774838142720445458
 GameObject:
   m_ObjectHideFlags: 0
@@ -2380,7 +2419,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 105, y: -850}
+  m_AnchoredPosition: {x: 100, y: -850}
   m_SizeDelta: {x: 850, y: 75}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &3415094429957394894
@@ -2469,6 +2508,7 @@ GameObject:
   - component: {fileID: 7602499479833614837}
   - component: {fileID: 5264897496155672346}
   - component: {fileID: 2904865997629472885}
+  - component: {fileID: 5072942417732620418}
   m_Layer: 5
   m_Name: Accessibility Heading
   m_TagString: Untagged
@@ -2492,8 +2532,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 105, y: -550}
-  m_SizeDelta: {x: 300, y: 75}
+  m_AnchoredPosition: {x: 100, y: -550}
+  m_SizeDelta: {x: 500, y: 75}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &5264897496155672346
 CanvasRenderer:
@@ -2594,6 +2634,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5072942417732620418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3537457887620851093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &3847882415355661306
 GameObject:
   m_ObjectHideFlags: 0
@@ -2679,8 +2733,8 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1106503309356793423}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
-  m_WholeNumbers: 1
+  m_MaxValue: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2709,7 +2763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe09d35ff29c8d8c9929c6582f938cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultValue: 100
+  defaultValue: 1
 --- !u!1 &3946558339266364523
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,7 +3024,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 105, y: -625}
+  m_AnchoredPosition: {x: 100, y: -625}
   m_SizeDelta: {x: 850, y: 75}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &4386632754374300883
@@ -3095,6 +3149,7 @@ GameObject:
   - component: {fileID: 1869547881226915505}
   - component: {fileID: 1029658934739785129}
   - component: {fileID: 1342173869790060582}
+  - component: {fileID: 4027483197482343783}
   m_Layer: 5
   m_Name: Audio Heading
   m_TagString: Untagged
@@ -3119,7 +3174,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 100, y: -200}
-  m_SizeDelta: {x: 300, y: 75}
+  m_SizeDelta: {x: 500, y: 75}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &1029658934739785129
 CanvasRenderer:
@@ -3220,6 +3275,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4027483197482343783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483031199139422545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &4487264661733604867
 GameObject:
   m_ObjectHideFlags: 0
@@ -4024,6 +4093,7 @@ GameObject:
   - component: {fileID: 8425623445810573164}
   - component: {fileID: 2651430886098423220}
   - component: {fileID: 5372203478409455147}
+  - component: {fileID: 7426029119422419732}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -4149,6 +4219,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7426029119422419732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5790735801578143039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &5934426805671725107
 GameObject:
   m_ObjectHideFlags: 0
@@ -4235,6 +4319,7 @@ GameObject:
   - component: {fileID: 7060380497116360679}
   - component: {fileID: 6758890339257687092}
   - component: {fileID: 3320641945452396595}
+  - component: {fileID: 5477646968388745202}
   m_Layer: 5
   m_Name: Options Heading
   m_TagString: Untagged
@@ -4360,6 +4445,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5477646968388745202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6247548270569772492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &6352746649314526950
 GameObject:
   m_ObjectHideFlags: 0
@@ -4521,6 +4620,7 @@ GameObject:
   - component: {fileID: 5557305062468905112}
   - component: {fileID: 403632953092817699}
   - component: {fileID: 8471230927334590756}
+  - component: {fileID: 3026185626426930737}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4646,6 +4746,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3026185626426930737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6637931801499388112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &6914050400847798921
 GameObject:
   m_ObjectHideFlags: 0
@@ -4693,6 +4807,7 @@ GameObject:
   - component: {fileID: 3608167069268441721}
   - component: {fileID: 1504365250898343176}
   - component: {fileID: 922275550913328488}
+  - component: {fileID: 1374379087182719624}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4818,6 +4933,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1374379087182719624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7015043860384396270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &7076854336330828432
 GameObject:
   m_ObjectHideFlags: 0
@@ -4829,6 +4958,7 @@ GameObject:
   - component: {fileID: 8170069763181177019}
   - component: {fileID: 8843589822721872347}
   - component: {fileID: 6655860663656034818}
+  - component: {fileID: 8730542630159669818}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4954,6 +5084,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8730542630159669818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7076854336330828432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &7079495457064838196
 GameObject:
   m_ObjectHideFlags: 0
@@ -5001,6 +5145,7 @@ GameObject:
   - component: {fileID: 4598327852315919061}
   - component: {fileID: 5509600528880433675}
   - component: {fileID: 5874228417281169040}
+  - component: {fileID: 5043879824435478732}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -5126,6 +5271,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5043879824435478732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7081645487978699771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &7222619683788565892
 GameObject:
   m_ObjectHideFlags: 0
@@ -5137,6 +5296,7 @@ GameObject:
   - component: {fileID: 483335613591095387}
   - component: {fileID: 4059659903594815407}
   - component: {fileID: 8181227444742186809}
+  - component: {fileID: 6197150277374724017}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
@@ -5262,6 +5422,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6197150277374724017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7222619683788565892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &7468795375026295750
 GameObject:
   m_ObjectHideFlags: 0
@@ -5459,6 +5633,7 @@ GameObject:
   - component: {fileID: 2232509682629192162}
   - component: {fileID: 7919528629274651411}
   - component: {fileID: 8462347266840530933}
+  - component: {fileID: 7224081027169691704}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -5584,6 +5759,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7224081027169691704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8090845361108649685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &8226746065803105170
 GameObject:
   m_ObjectHideFlags: 0
@@ -5670,6 +5859,7 @@ GameObject:
   - component: {fileID: 8595509882547222657}
   - component: {fileID: 808320893769047561}
   - component: {fileID: 5026561979412551028}
+  - component: {fileID: 270255507166688592}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -5795,6 +5985,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &270255507166688592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8286793570252714110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &8621000505695912610
 GameObject:
   m_ObjectHideFlags: 0
@@ -5953,6 +6157,7 @@ GameObject:
   - component: {fileID: 3168881363848315039}
   - component: {fileID: 1495644663337357870}
   - component: {fileID: 6838753640958233934}
+  - component: {fileID: 5920415776322460759}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -6007,7 +6212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <b>AD</b>HD-<b>frie</b>ndly <b>Te</b>xt
+  m_text: ADHD-friendly Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6078,6 +6283,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5920415776322460759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9128300591672534996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 1
 --- !u!1 &9173117347657193580
 GameObject:
   m_ObjectHideFlags: 0
