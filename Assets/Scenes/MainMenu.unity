@@ -382,6 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &403857098
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,6 +935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &790367118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,6 +1086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &862549050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1611,6 +1614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &972811014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1840,6 +1844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &1062025023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1990,6 +1995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &1203676878
 GameObject:
   m_ObjectHideFlags: 0
@@ -2140,6 +2146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &1279408317
 GameObject:
   m_ObjectHideFlags: 0
@@ -2290,6 +2297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &1387554261
 GameObject:
   m_ObjectHideFlags: 0
@@ -2625,6 +2633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &1633851116
 GameObject:
   m_ObjectHideFlags: 0
@@ -2775,6 +2784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &1708513599
 GameObject:
   m_ObjectHideFlags: 0
@@ -2925,6 +2935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &2004627340
 GameObject:
   m_ObjectHideFlags: 0
@@ -3075,6 +3086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &2017356028
 GameObject:
   m_ObjectHideFlags: 0
