@@ -1,21 +1,4 @@
-using UnityEngine;
-
-public class PlayerShip : MonoBehaviour
+public class PlayerShip : Ship
 {
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void Select() {
-        Debug.Log("Ship Selected");
-    }
 }
