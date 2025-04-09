@@ -56,29 +56,26 @@ public class TextSettings : MonoBehaviour
 
     void setAdhdFriendlyTextSetting(bool isEnabled)
     {
-        if (isEnabled)
-        {
-            var regex = new Regex("[A-Za-z]+");
-            var adhdFriendlyText = string.Empty;
-            var currentIndex = 0;
-            foreach (Match match in regex.Matches(textComponent.text))
-            {
-                adhdFriendlyText += textComponent.text.Substring(currentIndex, match.Index - currentIndex)
-                    + "<b>"
-                    + match.Value.Substring(0, (int)Math.Ceiling((float)match.Length / 2))
-                    + "</b>"
-                    + match.Value.Substring((int)Math.Ceiling((float)match.Length / 2));
-                currentIndex = match.Index + match.Length;
-            }
-            adhdFriendlyText += textComponent.text.Substring(currentIndex);
-            textComponent.text = adhdFriendlyText;
-        }
-        else
-            textComponent.text = defaultText;
-
-        if (defaultIsBold)
-            textComponent.fontStyle ^= FontStyles.Bold;
-
+        textComponent.text = isEnabled ? generateAdhdFriendlyText(textComponent.text) : defaultText;
+        textComponent.fontStyle ^= defaultIsBold ? FontStyles.Bold : FontStyles.Normal;
         currentAdhdFriendlyTextSetting = isEnabled;
+    }
+
+    string generateAdhdFriendlyText(string text)
+    {
+        var regex = new Regex("[A-Za-z]+(?:'[A-Za-z]+)*");
+        var adhdFriendlyText = string.Empty;
+        var currentIndex = 0;
+        foreach (Match match in regex.Matches(text))
+        {
+            adhdFriendlyText += text.Substring(currentIndex, match.Index - currentIndex)
+                + "<b>"
+                + match.Value[..(int)Math.Ceiling((float)match.Length / 2)]
+                + "</b>"
+                + match.Value[(int)Math.Ceiling((float)match.Length / 2)..];
+            currentIndex = match.Index + match.Length;
+        }
+        adhdFriendlyText += text[currentIndex..];
+        return adhdFriendlyText;
     }
 }
