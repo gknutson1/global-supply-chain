@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour {
 
@@ -16,9 +17,12 @@ public class GameManager : MonoBehaviour {
         _selector = GameObject.Find("SelectorBox");
         _selector.SetActive(false);
         _selector.transform.localScale = Vector3.zero;
+
+        _moveAction = InputSystem.actions.FindAction("Move");
+        _scrollAction = InputSystem.actions.FindAction("Zoom");
     }
     
-    // Get position of the mouse as a unity coordinate (zeroed out)
+    /// Get position of the mouse as a unity coordinate (zeroed out)
     private Vector3 MousePosition() {
         Vector3 cam = _camera!.ScreenToWorldPoint(Input.mousePosition);
         cam.z = 0;
@@ -52,5 +56,38 @@ public class GameManager : MonoBehaviour {
             // Position the selector directly in the middle between origin and mouse
             _selector.transform.position = ((mousePos - _originPos) / 2) + _originPos;
         }
+        
+        if (_moveAction.inProgress) OnMove();
+        if (_scrollAction.inProgress) OnScroll();
+    }
+
+    private InputAction _moveAction;
+    private const float MoveSpeed = 10;
+    
+    private void OnMove() {
+        _camera.transform.position += (Vector3)(MoveSpeed * Time.deltaTime * _moveAction.ReadValue<Vector2>());
+    }
+    
+    private InputAction _scrollAction;
+    private const float ScrollSpeed = 100;
+    private const float ScrollMin = 2;
+    private const float ScrollMax = 80;
+
+    private void OnScroll() {
+        // Get the old world position of mouse
+        Vector3 prevPos = MousePosition();
+        
+        _camera.orthographicSize = Mathf.Clamp(
+            // -1 because otherwise the scroll direction is inverted.
+            _camera.orthographicSize + ScrollSpeed * Time.deltaTime * (-1 * _scrollAction.ReadValue<float>()), 
+            ScrollMin, 
+            ScrollMax
+        );
+        
+        // Get the new world position of mouse
+        Vector3 newPos = MousePosition();
+
+        // Adjust the position of the camera based off of the difference between the new and old mouse positions
+        _camera.transform.position += (prevPos - newPos);
     }
 }
