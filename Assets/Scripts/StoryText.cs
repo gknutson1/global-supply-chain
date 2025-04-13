@@ -135,7 +135,7 @@ public class StoryText : MonoBehaviour
             line--;
             DisplayNextLine();
         }
-        else
+        else if(line >= 0)
         {
             textComponent.text = isEnabled ? generateAdhdFriendlyText(storyText[level][line]) : storyText[level][line];
         }

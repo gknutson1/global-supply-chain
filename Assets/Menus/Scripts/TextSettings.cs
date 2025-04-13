@@ -19,7 +19,6 @@ public class TextSettings : MonoBehaviour
     void Start()
     {
         textComponent = GetComponent<TextMeshProUGUI>();
-        print($"Start: {textComponent.text}");
         defaultText = textComponent.text;
         defaultFont = textComponent.font;
         defaultIsBold = (textComponent.fontStyle & FontStyles.Bold) == FontStyles.Bold;
@@ -38,7 +37,6 @@ public class TextSettings : MonoBehaviour
     void UpdateTextSettings()
     {
         var newDyslexiaFriendlyFontSetting = PlayerPrefs.GetInt("Dyxlexia-friendly Font", currentDyslexiaFriendlyFontSetting ? 1 : 0) == 1;
-        print($"Updating dyslexia font settings: {textComponent.text} - {currentDyslexiaFriendlyFontSetting}, {newDyslexiaFriendlyFontSetting}");
         if (newDyslexiaFriendlyFontSetting != currentDyslexiaFriendlyFontSetting)
             setDyslexiaFriendlyFontSetting(newDyslexiaFriendlyFontSetting);
 
@@ -49,7 +47,6 @@ public class TextSettings : MonoBehaviour
 
     void setDyslexiaFriendlyFontSetting(bool isEnabled)
     {
-        print($"Setting dyslexia friendly font: {textComponent.text}");
         textComponent.font = isEnabled ? dyslexiaFriendlyFont : defaultFont;
         currentDyslexiaFriendlyFontSetting = isEnabled;
     }
