@@ -3,16 +3,27 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using TMPro;
+using UnityEditor.ShortcutManagement;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class StoryText : MonoBehaviour
 {
-    GameManager gameManager;
+    public TMP_FontAsset dyslexiaFriendlyFont;
+    TMP_FontAsset defaultFont;
+    bool currentDyslexiaFriendlyFontSetting = false;
+    bool currentAdhdFriendlyTextSetting = false;
+
+    PersistentVariables persistentVariables;
     TextMeshProUGUI textComponent;
-    int level = 0;
+    int level;
     int line = -1;
     bool isAnimating = false;
+    bool isPaused = false;
     Coroutine coroutine;
+
 
     readonly List<List<string>> storyText = new() {
         // Chapter 0 text
@@ -28,8 +39,27 @@ public class StoryText : MonoBehaviour
 
     void Start()
     {
+        persistentVariables = FindAnyObjectByType<PersistentVariables>();
+        level = persistentVariables.level;
         textComponent = GetComponent<TextMeshProUGUI>();
+        UpdateTextSettings();
         DisplayNextLine();
+    }
+
+    void Update()
+    {
+        if ((Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) && !isPaused)
+            if (isAnimating)
+                SkipAnimation();
+            else if (line < storyText[level].Count - 1)
+                DisplayNextLine();
+            else
+                SceneManager.LoadScene(2);
+    }
+
+    public void Pause(bool pause)
+    {
+        isPaused = pause;
     }
 
     void DisplayNextLine()
@@ -39,15 +69,6 @@ public class StoryText : MonoBehaviour
         coroutine = StartCoroutine(AnimateText());
     }
 
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
-            if (isAnimating)
-                SkipAnimation();
-            else if (line < storyText[level].Count - 1)
-                DisplayNextLine();
-    }
-
     List<string> FormatStoryTextForAnimation(string text)
     {
         var storyText = new List<string>();
@@ -55,7 +76,7 @@ public class StoryText : MonoBehaviour
         foreach (var character in text)
             storyText.Add($"{character}");
 
-        if (PlayerPrefs.GetInt("ADHD-friendly Text", 0) == 1)
+        if (currentAdhdFriendlyTextSetting)
         {
             var regex = new Regex("[A-Za-z]+(?:'[A-Za-z]+)*");
             foreach (Match match in regex.Matches(text))
@@ -73,7 +94,9 @@ public class StoryText : MonoBehaviour
         foreach (var character in formattedText)
         {
             textComponent.text += character;
-            yield return new WaitForSeconds(0.05f);
+            do
+                yield return new WaitForSeconds(0.05f);
+            while (isPaused);
         }
         isAnimating = false;
     }
@@ -82,6 +105,57 @@ public class StoryText : MonoBehaviour
     {
         StopCoroutine(coroutine);
         isAnimating = false;
-        textComponent.text = storyText[level][line];
+        textComponent.text = currentAdhdFriendlyTextSetting ? generateAdhdFriendlyText(storyText[level][line]) : storyText[level][line];
+    }
+
+    void UpdateTextSettings()
+    {
+        var newDyslexiaFriendlyFontSetting = PlayerPrefs.GetInt("Dyxlexia-friendly Font", currentDyslexiaFriendlyFontSetting ? 1 : 0) == 1;
+        if (newDyslexiaFriendlyFontSetting != currentDyslexiaFriendlyFontSetting)
+            setDyslexiaFriendlyFontSetting(newDyslexiaFriendlyFontSetting);
+
+        var newAdhdFriendlyFontSetting = PlayerPrefs.GetInt("ADHD-friendly Text", currentAdhdFriendlyTextSetting ? 1 : 0) == 1;
+        if (newAdhdFriendlyFontSetting != currentAdhdFriendlyTextSetting)
+            setAdhdFriendlyTextSetting(newAdhdFriendlyFontSetting);
+    }
+
+    void setDyslexiaFriendlyFontSetting(bool isEnabled)
+    {
+        textComponent.font = isEnabled ? dyslexiaFriendlyFont : defaultFont;
+        currentDyslexiaFriendlyFontSetting = isEnabled;
+    }
+
+    void setAdhdFriendlyTextSetting(bool isEnabled)
+    {
+        currentAdhdFriendlyTextSetting = isEnabled;
+
+        if (isAnimating)
+        {
+            StopCoroutine(coroutine);
+            line--;
+            DisplayNextLine();
+        }
+        else
+        {
+            textComponent.text = isEnabled ? generateAdhdFriendlyText(storyText[level][line]) : storyText[level][line];
+        }
+    }
+
+    string generateAdhdFriendlyText(string text)
+    {
+        var regex = new Regex("[A-Za-z]+(?:'[A-Za-z]+)*");
+        var adhdFriendlyText = string.Empty;
+        var currentIndex = 0;
+        foreach (Match match in regex.Matches(text))
+        {
+            adhdFriendlyText += text.Substring(currentIndex, match.Index - currentIndex)
+                + "<b>"
+                + match.Value[..(int)Math.Ceiling((float)match.Length / 2)]
+                + "</b>"
+                + match.Value[(int)Math.Ceiling((float)match.Length / 2)..];
+            currentIndex = match.Index + match.Length;
+        }
+        adhdFriendlyText += text[currentIndex..];
+        return adhdFriendlyText;
     }
 }
