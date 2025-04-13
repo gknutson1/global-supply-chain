@@ -893,6 +893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e1975bf7bcbe245b4d29651f81b56e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
 --- !u!1 &1699989639 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8062370486661153589, guid: 28b445fafdfab747cb068ea35a2d2691, type: 3}
