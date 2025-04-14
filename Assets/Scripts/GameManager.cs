@@ -62,10 +62,10 @@ public class GameManager : MonoBehaviour {
     }
 
     private InputAction _moveAction;
-    private const float MoveSpeed = 10;
+    private const float MoveSpeed = 3;
     
     private void OnMove() {
-        _camera.transform.position += (Vector3)(MoveSpeed * Time.deltaTime * _moveAction.ReadValue<Vector2>());
+        _camera.transform.position += (Vector3)(MoveSpeed * _camera.orthographicSize * Time.deltaTime * _moveAction.ReadValue<Vector2>());
     }
     
     private InputAction _scrollAction;
