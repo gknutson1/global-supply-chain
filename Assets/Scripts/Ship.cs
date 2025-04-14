@@ -77,7 +77,7 @@ public class Ship : MonoBehaviour {
         if (Mathf.Abs(toMove) <= TurnSnap && Mathf.Abs(TurnCur) <= TurnSnap) {
             // Just set our rotation to the target
             var qAngles = gameObject.transform.eulerAngles;
-            qAngles.z += targetAngle;
+            qAngles.z = targetAngle;
             gameObject.transform.eulerAngles = qAngles;
             return;
         }
