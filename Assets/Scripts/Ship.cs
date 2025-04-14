@@ -66,10 +66,9 @@ public class Ship : MonoBehaviour {
     public const float TurnSnap = 0.001f;
     private float TurnCur = 0f;
     
-    private void Move(Vector3 target) {
+    private float Rotate(Vector3 target) {
         Vector3 position = gameObject.transform.position;
         
-        // ===== ROTATION =====
         float targetAngle = Vector2.SignedAngle(position, target - position);
         float toMove = Mathf.DeltaAngle(gameObject.transform.eulerAngles.z, targetAngle);
 
@@ -79,7 +78,7 @@ public class Ship : MonoBehaviour {
             var qAngles = gameObject.transform.eulerAngles;
             qAngles.z = targetAngle;
             gameObject.transform.eulerAngles = qAngles;
-            return;
+            return toMove;
         }
 
         // Increase or decrease the turn speed, based off of if we need to start slowing down
@@ -93,6 +92,13 @@ public class Ship : MonoBehaviour {
         var angles = gameObject.transform.eulerAngles;
         angles.z += TurnCur * Time.deltaTime;
         gameObject.transform.eulerAngles = angles;
+
+        return toMove;
+    }
+
+    private void Move(Vector3 target) {
+        Vector3 position = gameObject.transform.position;
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -141,6 +147,9 @@ public class Ship : MonoBehaviour {
         // If we have no target at all, stop.
         if (_target is null) return;
         
-        Move((Vector3) _target);
+        float remain = Rotate((Vector3) _target);
+
+        if (Mathf.Abs(remain) <= 90) 
+            Move((Vector3) _target);
     }
 }
