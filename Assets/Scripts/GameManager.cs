@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour {
 
     // The collider that is used to detect when the user has selected a ship
     private GameObject _selector;
+
+    private PersistentVariables _persistentVariables;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
@@ -20,6 +22,8 @@ public class GameManager : MonoBehaviour {
 
         _moveAction = InputSystem.actions.FindAction("Move");
         _scrollAction = InputSystem.actions.FindAction("Zoom");
+
+        _persistentVariables = FindAnyObjectByType<PersistentVariables>();
     }
     
     /// Get position of the mouse as a unity coordinate (zeroed out)
@@ -59,6 +63,8 @@ public class GameManager : MonoBehaviour {
         
         if (_moveAction.inProgress) OnMove();
         if (_scrollAction.inProgress) OnScroll();
+
+        if (Input.GetKeyDown(KeyCode.Escape)) TogglePauseGame();
     }
 
     private InputAction _moveAction;
@@ -89,5 +95,16 @@ public class GameManager : MonoBehaviour {
 
         // Adjust the position of the camera based off of the difference between the new and old mouse positions
         _camera.transform.position += (prevPos - newPos);
+    }
+
+    public Canvas pauseMenu;
+    bool isPaused = false;
+
+    // Pause the game and show the pause menu, or unpause the game and hide the pause menu.
+    public void TogglePauseGame()
+    {
+        isPaused ^= true;
+        // TODO: Add logic for actually pausing the game while the pause menu is displayed (or resuming when it is not).
+        pauseMenu.enabled = isPaused;
     }
 }
