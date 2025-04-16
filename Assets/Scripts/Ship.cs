@@ -60,10 +60,9 @@ public class Ship : MonoBehaviour {
     private static float DifferenceToStop(float cur, float decel) => 
         Mathf.Sign(cur) * ((cur * cur / decel) - (0.5f * decel * Mathf.Pow(cur / decel, 2)));
 
-    public const float SpeedMax = 2f;
-    public const float TurnMax = 10f;
-    public const float TurnAccel = 4f;
-    public const float TurnSnap = 0.001f;
+    public float TurnMax = 10f;
+    public float TurnAccel = 4f;
+    public float TurnSnap = 0.001f;
     private float TurnCur = 0f;
     
     private float Rotate(Vector3 target) {
@@ -95,6 +94,11 @@ public class Ship : MonoBehaviour {
 
         return toMove;
     }
+    
+    public float SpeedMax = 10f;
+    public float SpeedAccel = .8f;
+    public float SpeedSnap = 0.001f;
+    private float SpeedCur = 1f;
 
     private void Move(Vector3 target) {
         Vector3 position = gameObject.transform.position;
