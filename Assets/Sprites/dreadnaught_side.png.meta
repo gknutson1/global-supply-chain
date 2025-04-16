@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dreadnaught_side_0: 4623934721741544148
+      dreadnaught_side_1: -4924310931670121071
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
