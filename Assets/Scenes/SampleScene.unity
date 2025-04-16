@@ -152,6 +152,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipColor: {r: 0, g: 1, b: 0.15127659, a: 1}
   shipSprite: {fileID: -5686335420914582405, guid: 5c6f71ebc6d53754daf5a5e2512174b5, type: 3}
+  TurnMax: 10
+  TurnAccel: 4
+  TurnSnap: 0.001
+  SpeedMax: 10
+  SpeedAccel: 0.8
+  SpeedSnap: 0.001
 --- !u!4 &15704438
 Transform:
   m_ObjectHideFlags: 0
@@ -308,7 +314,7 @@ MonoBehaviour:
   shipLayer:
     serializedVersion: 2
     m_Bits: 64
-  pauseMenu: {fileID: 1995332094}
+  pauseMenu: {fileID: 0}
 --- !u!114 &518494216
 MonoBehaviour:
   m_ObjectHideFlags: 0
