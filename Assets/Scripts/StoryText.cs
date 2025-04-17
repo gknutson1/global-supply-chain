@@ -28,12 +28,15 @@ public class StoryText : MonoBehaviour
     readonly List<List<string>> storyText = new() {
         // Chapter 0 text
         new() {
-            "This is one line of text for Chapter 0.",
-            "Here's a second line of text for chapter 0."
+            "Welcome to the Navy, Lieutenant. Are you ready to defend the world's oceans from hostile forces?",
+            "Congrats, your ship is a corvette-class: nimble yet powerful. Perfect for hunting pirates in these waters.",
+            
         },
         //Chapter 1
         new() {
-            "Chapter 1"
+            "Chapter 1: Strait of Hormuz", 
+            "This vital oil route winds to a narrow strip as the Persian Gulf and the Arabian Sea converge.",
+            "Warning: Pirates seen in these waters. "
         }
     };
 

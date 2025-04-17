@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      submarine_above_0: -534267486746209371
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

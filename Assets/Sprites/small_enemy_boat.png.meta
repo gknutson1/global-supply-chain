@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      small_enemy_boat_0: 4054424804196018934
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

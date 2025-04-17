@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ryuho_carrier_0: 6397482822007194060
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3fe5878ed59e67a13aadd7f68c78d24a
+guid: 02ddedacc91c11d43be6d9536411ad99
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1066787939793751293
-    second: patrol_boat_0
+      213: -4202644606488494192
+    second: Alabama_gun_pic_enhancede_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: patrol_boat_0
+      name: Alabama_gun_pic_enhancede_0
       rect:
         serializedVersion: 2
-        x: 363
-        y: 436
-        width: 367
-        height: 1191
+        x: 0
+        y: 0
+        width: 812
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dfcc31aaafdfdce00800000000000000
-      internalID: 1066787939793751293
+      spriteID: 09fba093ff43da5c0800000000000000
+      internalID: -4202644606488494192
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      patrol_boat_0: 1066787939793751293
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 3fe5878ed59e67a13aadd7f68c78d24a
+guid: 4811732e42092b54aa786b6e6981586b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1066787939793751293
-    second: patrol_boat_0
+      213: -5625119187539248694
+    second: sub_front_0
+  - first:
+      213: -905721966344330371
+    second: sub_front_1
+  - first:
+      213: 8407160652282131044
+    second: sub_front_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: patrol_boat_0
+      name: sub_front_0
       rect:
         serializedVersion: 2
-        x: 363
-        y: 436
-        width: 367
-        height: 1191
+        x: 172
+        y: 59
+        width: 443
+        height: 559
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dfcc31aaafdfdce00800000000000000
-      internalID: 1066787939793751293
+      spriteID: ac93d7fe6ef8fe1b0800000000000000
+      internalID: -5625119187539248694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sub_front_1
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 614
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7327ca9baa3e63f0800000000000000
+      internalID: -905721966344330371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sub_front_2
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 559
+        width: 13
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 462fae8f11c3ca470800000000000000
+      internalID: 8407160652282131044
       vertices: []
       indices: 
       edges: []
@@ -134,8 +184,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      patrol_boat_0: 1066787939793751293
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

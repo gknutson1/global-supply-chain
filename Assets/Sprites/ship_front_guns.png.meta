@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ship_front_guns_0: -4167471860614190752
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
