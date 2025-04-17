@@ -75,5 +75,5 @@ crashlytics-build.properties
 
 # VSCode Settings
 .vscode/
-.vsconfig/
 .vsconfig
+
