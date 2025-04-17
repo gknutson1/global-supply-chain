@@ -37,7 +37,7 @@ public class StoryText : MonoBehaviour
             "Chapter 1: Strait of Hormuz", 
             "This vital oil route winds to a narrow strip as the Persian Gulf and the Arabian Sea converge.",
             "Warning: Hostiles seen in these waters. "
-        }
+        },
         //Chapter 2
         new() {
             "Chapter 2: Strait of Malacca",

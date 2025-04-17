@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cloud_horizon_background_0: -8776430851143096125
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
