@@ -75,8 +75,9 @@ public class Ship : MonoBehaviour
     {
         Vector3 position = gameObject.transform.position;
 
-        float targetAngle = Vector2.SignedAngle(position, target - position);
+        float targetAngle = Vector2.SignedAngle(Vector3.left, target - position);
         float toMove = Mathf.DeltaAngle(gameObject.transform.eulerAngles.z, targetAngle);
+        print($"{position}, {target}, {targetAngle}");
 
         // If both our turning speed and our desired angle is below TurnSnap, stop processing rotation commands
         if (Mathf.Abs(toMove) <= TurnSnap && Mathf.Abs(TurnCur) <= TurnSnap)
@@ -183,6 +184,8 @@ public class Ship : MonoBehaviour
 
     IEnumerator Attack()
     {
+        yield return new WaitForSeconds(1);
+
         while (true)
         {
             var hitColliders = Physics2D.OverlapCircleAll(transform.position, AttackRadius, LayerMask.GetMask("Ships"));
