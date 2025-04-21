@@ -192,8 +192,7 @@ public class Ship : MonoBehaviour
 
         float remain = Rotate((Vector3)_target);
 
-        if (Mathf.Abs(remain) <= 90)
-            Move((Vector3)_target);
+        Move((Vector3)_target, remain);
     }
 
     public float AttackRadius = 5f;
