@@ -114,10 +114,8 @@ public class Ship : MonoBehaviour
     private void Move(Vector3 target, float remain) {
         //if (!move) return;
         Vector3 position = gameObject.transform.position;
-        float rotation = gameObject.transform.eulerAngles.z;
-        Debug.Log(remain);
-
-        if (Mathf.Abs(remain) > 45) {
+        
+        if (Mathf.Abs(remain) > Mathf.Lerp(90, 0, SpeedCur / SpeedMax)) {
             SpeedCur = Mathf.MoveTowards(SpeedCur, 0, SpeedAccel * Time.deltaTime);
         }
         else {
@@ -130,6 +128,7 @@ public class Ship : MonoBehaviour
             );
         }
 
+        float rotation = gameObject.transform.eulerAngles.z;
         position.y += Mathf.Sin(rotation * Mathf.Deg2Rad) * -1 * SpeedCur * Time.deltaTime;
         position.x += Mathf.Cos(rotation * Mathf.Deg2Rad) * -1 * SpeedCur * Time.deltaTime;
 
