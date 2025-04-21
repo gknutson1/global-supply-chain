@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jmont\\UnityFiles\\GlobalSC\\GlobalSC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B44F0BD3-2B02-89C9-99DB-C1E77DEB2C30}|Assembly-CSharp.csproj|c:\\users\\jmont\\unityfiles\\globalsc\\globalsc\\assets\\scripts\\storytext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B44F0BD3-2B02-89C9-99DB-C1E77DEB2C30}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\storytext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B44F0BD3-2B02-89C9-99DB-C1E77DEB2C30}|Assembly-CSharp.csproj|c:\\users\\jmont\\unityfiles\\globalsc\\globalsc\\assets\\scripts\\storymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B44F0BD3-2B02-89C9-99DB-C1E77DEB2C30}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\storymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StoryManager.cs",
+              "DocumentMoniker": "C:\\Users\\jmont\\UnityFiles\\GlobalSC\\GlobalSC\\Assets\\Scripts\\StoryManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StoryManager.cs",
+              "ToolTip": "C:\\Users\\jmont\\UnityFiles\\GlobalSC\\GlobalSC\\Assets\\Scripts\\StoryManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StoryManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T18:54:58.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StoryText.cs",
+              "DocumentMoniker": "C:\\Users\\jmont\\UnityFiles\\GlobalSC\\GlobalSC\\Assets\\Scripts\\StoryText.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\StoryText.cs",
+              "ToolTip": "C:\\Users\\jmont\\UnityFiles\\GlobalSC\\GlobalSC\\Assets\\Scripts\\StoryText.cs",
+              "RelativeToolTip": "Assets\\Scripts\\StoryText.cs",
+              "ViewState": "AgIAAAUAAAAAQDIzMzOzvyYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T04:51:01.145Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
