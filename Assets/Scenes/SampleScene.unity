@@ -155,16 +155,16 @@ MonoBehaviour:
   TurnMax: 10
   TurnAccel: 4
   TurnSnap: 0.001
-  SpeedMax: 10
+  SpeedMax: 4
   SpeedAccel: 0.8
-  SpeedSnap: 0.001
+  SpeedSnap: 0.01
+  move: 1
   AttackRadius: 5
   AttackRate: 1
   Strength: 5
   Accuracy: 1
   MaxAttackCount: 1
   MaxHealth: 50
-  move: 0
 --- !u!4 &15704438
 Transform:
   m_ObjectHideFlags: 0
@@ -547,6 +547,7 @@ MonoBehaviour:
   SpeedMax: 10
   SpeedAccel: 0.8
   SpeedSnap: 0.001
+  move: 1
   AttackRadius: 2
   AttackRate: 1
   Strength: 2
@@ -1479,6 +1480,7 @@ MonoBehaviour:
   SpeedMax: 10
   SpeedAccel: 0.8
   SpeedSnap: 0.001
+  move: 1
   AttackRadius: 5
   AttackRate: 1
   Strength: 10

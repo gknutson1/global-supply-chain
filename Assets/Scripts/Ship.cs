@@ -71,30 +71,30 @@ public class Ship : MonoBehaviour
     public float TurnSnap = 0.001f;
     private float TurnCur = 0f;
 
-    private float Rotate(Vector3 target)
-    {
+    private float Rotate(Vector3 target) {
+        if (!move) return 180;
         Vector3 position = gameObject.transform.position;
         
         float targetAngle = Mathf.Rad2Deg * Mathf.Atan2(target.y - position.y, target.x - position.x) + 180;
         float toMove = Mathf.DeltaAngle(gameObject.transform.eulerAngles.z, targetAngle);
-        print($"{position}, {target}, {targetAngle}");
+        //print($"{position}, {target}, {targetAngle}");
 
         // If both our turning speed and our desired angle is below TurnSnap, stop processing rotation commands
         if (Mathf.Abs(toMove) <= TurnSnap && Mathf.Abs(TurnCur) <= TurnSnap)
-        {
+        {   
             // Just set our rotation to the target
             var qAngles = gameObject.transform.eulerAngles;
             qAngles.z = targetAngle;
             gameObject.transform.eulerAngles = qAngles;
             return toMove;
         }
+        
+        // Do we need to start slowing down?
+        float tgt = DifferenceToStop(TurnCur, TurnAccel) >= toMove ? -TurnMax : TurnMax;
+        if (SpeedSnap >= distToDest) tgt = 0;
 
         // Increase or decrease the turn speed, based off of if we need to start slowing down
-        TurnCur = Mathf.MoveTowards(
-            TurnCur,
-            (DifferenceToStop(TurnCur, TurnAccel) > toMove) ? -TurnMax : TurnMax,
-            TurnAccel * Time.deltaTime
-        );
+        TurnCur = Mathf.MoveTowards(TurnCur, tgt, TurnAccel * Time.deltaTime);
 
         // Update the actual angle
         var angles = gameObject.transform.eulerAngles;
@@ -112,18 +112,16 @@ public class Ship : MonoBehaviour
     public bool move = true;
 
     private void Move(Vector3 target, float remain) {
-        //if (!move) return;
+        if (!move) return;
         Vector3 position = gameObject.transform.position;
-        
-        if (Mathf.Abs(remain) > Mathf.Lerp(90, 0, SpeedCur / SpeedMax)) {
+                
+        if (Mathf.Abs(remain) > Mathf.Lerp(45, 0, SpeedCur / SpeedMax) || distToDest / SpeedCur <= remain / TurnCur ) {
             SpeedCur = Mathf.MoveTowards(SpeedCur, 0, SpeedAccel * Time.deltaTime);
         }
         else {
-            // Pythagorean theorem
-            float distToDest = Mathf.Sqrt(Mathf.Abs(target.x - position.x) + Mathf.Abs(target.y - position.y));
             SpeedCur = Mathf.MoveTowards(
                 SpeedCur,
-                (DifferenceToStop(SpeedCur, SpeedAccel) > distToDest) ? 0 : SpeedMax,
+                (DifferenceToStop(SpeedCur, SpeedAccel) >= distToDest || SpeedSnap >= distToDest) ? 0 : SpeedMax,
                 SpeedAccel * Time.deltaTime
             );
         }
@@ -171,7 +169,7 @@ public class Ship : MonoBehaviour
         StartCoroutine(Attack());
     }
 
-    private Vector3? _target = null;
+    public Vector3 target;
     [CanBeNull] private GameObject _objTarget = null;
 
     private Vector3 MousePosition()
@@ -180,18 +178,26 @@ public class Ship : MonoBehaviour
         cam.z = 0;
         return cam;
     }
+    
+    
+    // Pythagorean theorem
+    private float distToDest = 0;
 
     void Update()
     {
-        _target = MousePosition();
+        this.target = MousePosition();
         // If we are following a GameObject, replace our target with that object
-        if (_objTarget is not null) _target = _objTarget.transform.position;
-        // If we have no target at all, stop.
-        if (_target is null) return;
+        if (_objTarget is not null) this.target = _objTarget.transform.position;
+        
+        // Cast away null
+        var target = (Vector3)this.target;
+        var pos = gameObject.transform.position;
 
-        float remain = Rotate((Vector3)_target);
+        distToDest = Mathf.Sqrt(Mathf.Abs(target.x - pos.x) + Mathf.Abs(target.y - pos.y));
 
-        Move((Vector3)_target, remain);
+        float remain = Rotate(target);
+
+        Move(target, remain);
     }
 
     public float AttackRadius = 5f;
