@@ -74,8 +74,8 @@ public class Ship : MonoBehaviour
     private float Rotate(Vector3 target)
     {
         Vector3 position = gameObject.transform.position;
-
-        float targetAngle = Vector2.SignedAngle(Vector3.left, target - position);
+        
+        float targetAngle = Mathf.Rad2Deg * Mathf.Atan2(target.y - position.y, target.x - position.x) + 180;
         float toMove = Mathf.DeltaAngle(gameObject.transform.eulerAngles.z, targetAngle);
         print($"{position}, {target}, {targetAngle}");
 
@@ -109,10 +109,32 @@ public class Ship : MonoBehaviour
     public float SpeedSnap = 0.001f;
     private float SpeedCur = 1f;
 
-    private void Move(Vector3 target)
-    {
-        Vector3 position = gameObject.transform.position;
+    public bool move = true;
 
+    private void Move(Vector3 target, float remain) {
+        //if (!move) return;
+        Vector3 position = gameObject.transform.position;
+        float rotation = gameObject.transform.eulerAngles.z;
+        Debug.Log(remain);
+
+        if (Mathf.Abs(remain) > 45) {
+            SpeedCur = Mathf.MoveTowards(SpeedCur, 0, SpeedAccel * Time.deltaTime);
+        }
+        else {
+            // Pythagorean theorem
+            float distToDest = Mathf.Sqrt(Mathf.Abs(target.x - position.x) + Mathf.Abs(target.y - position.y));
+            SpeedCur = Mathf.MoveTowards(
+                SpeedCur,
+                (DifferenceToStop(SpeedCur, SpeedAccel) > distToDest) ? 0 : SpeedMax,
+                SpeedAccel * Time.deltaTime
+            );
+        }
+
+        position.y += Mathf.Sin(rotation * Mathf.Deg2Rad) * -1 * SpeedCur * Time.deltaTime;
+        position.x += Mathf.Cos(rotation * Mathf.Deg2Rad) * -1 * SpeedCur * Time.deltaTime;
+
+        
+        gameObject.transform.position = position;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
