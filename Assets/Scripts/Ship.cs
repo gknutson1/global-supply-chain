@@ -69,7 +69,7 @@ public class Ship : MonoBehaviour
     public float TurnMax = 10f;
     public float TurnAccel = 4f;
     public float TurnSnap = 0.001f;
-    private float TurnCur = 0f;
+    public float TurnCur = 0f;
 
     private float Rotate(Vector3 target) {
         if (!move) return 180;
@@ -107,7 +107,7 @@ public class Ship : MonoBehaviour
     public float SpeedMax = 10f;
     public float SpeedAccel = .8f;
     public float SpeedSnap = 0.001f;
-    private float SpeedCur = 1f;
+    public float SpeedCur = 0f;
 
     public bool move = true;
 
@@ -144,6 +144,8 @@ public class Ship : MonoBehaviour
 
     void Start()
     {
+        target = gameObject.transform.position;
+        
         _camera = Camera.main;
 
         gameObject.GetComponent<SpriteRenderer>().sprite = shipSprite;
@@ -181,16 +183,19 @@ public class Ship : MonoBehaviour
     
     
     // Pythagorean theorem
-    private float distToDest = 0;
+    private float distToDest;
 
-    void Update()
-    {
-        this.target = MousePosition();
-        // If we are following a GameObject, replace our target with that object
-        if (_objTarget is not null) this.target = _objTarget.transform.position;
+    void Update() {
+        if (Selected && Input.GetMouseButtonDown(0))
+            Selected = false;
         
-        // Cast away null
-        var target = (Vector3)this.target;
+        if (Selected && Input.GetMouseButtonDown(1))
+            target = MousePosition();
+        
+        //target = MousePosition();
+        // If we are following a GameObject, replace our target with that object
+        if (_objTarget is not null) target = _objTarget.transform.position;
+        
         var pos = gameObject.transform.position;
 
         distToDest = Mathf.Sqrt(Mathf.Abs(target.x - pos.x) + Mathf.Abs(target.y - pos.y));
