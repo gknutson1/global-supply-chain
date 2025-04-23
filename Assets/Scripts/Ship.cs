@@ -249,7 +249,7 @@ public class Ship : MonoBehaviour
                     var projectileObject = Instantiate(ProjectilePrefab, transform.position, projectileRotation);
                     var projectile = projectileObject.GetComponent<Projectile>();
 
-                    projectile.Fire(collider.gameObject, ProjectileSprite, Random.value <= Accuracy, Strength);
+                    projectile.Fire(collider, ProjectileSprite, Random.value <= Accuracy, Strength);
                     
                     attackCount++;
                 }
@@ -266,7 +266,6 @@ public class Ship : MonoBehaviour
     {
         _currentHealth -= damage;
         _healthBar.UpdateHealthBar((float)_currentHealth / MaxHealth);
-        print($"{name} health: {_currentHealth}");
         if (_currentHealth <= 0) Destroy(gameObject);
     }
 }
