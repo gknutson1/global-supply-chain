@@ -28,8 +28,8 @@ public class Projectile : MonoBehaviour
 
             if (Vector2.Distance(position, targetPosition) <= 0.05f) {
                 var ship = target.GetComponent<Ship>();
-                if (hits) ship.Hit(damage);
-                if(gameObject != null) Destroy(gameObject);
+                if (hits && ship != null) ship.Hit(damage);
+                Destroy(gameObject);
             }
         }
     }

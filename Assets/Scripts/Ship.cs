@@ -1,5 +1,6 @@
 using System.Collections;
 using JetBrains.Annotations;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class Ship : MonoBehaviour
@@ -101,7 +102,17 @@ public class Ship : MonoBehaviour
         angles.z += TurnCur * Time.deltaTime;
         gameObject.transform.eulerAngles = angles;
 
+        fixHealthBarLocation();
+
         return toMove;
+    }
+
+    private void fixHealthBarLocation() {
+        _healthBarCanvas.transform.eulerAngles = Vector3.zero;
+
+        Vector3 position = gameObject.transform.position;
+        position.y -= 1;
+        _healthBarCanvas.transform.position = position;
     }
 
     public float SpeedMax = 10f;
@@ -167,7 +178,11 @@ public class Ship : MonoBehaviour
         _selectionRing.startColor = _selectionRing.endColor = shipColor;
         _selectionRing.enabled = false;
 
+        _healthBarCanvas = GetComponentInChildren<Canvas>();
+        _healthBar = _healthBarCanvas.GetComponentInChildren<HealthBar>();
         _currentHealth = MaxHealth;
+        fixHealthBarLocation();
+
         StartCoroutine(Attack());
     }
 
@@ -244,9 +259,13 @@ public class Ship : MonoBehaviour
         }
     }
 
+    private Canvas _healthBarCanvas;
+    private HealthBar _healthBar;
+
     public void Hit(int damage)
     {
         _currentHealth -= damage;
+        _healthBar.UpdateHealthBar((float)_currentHealth / MaxHealth);
         print($"{name} health: {_currentHealth}");
         if (_currentHealth <= 0) Destroy(gameObject);
     }
