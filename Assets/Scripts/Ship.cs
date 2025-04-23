@@ -205,6 +205,8 @@ public class Ship : MonoBehaviour
         Move(target, remain);
     }
 
+    public GameObject ProjectilePrefab;
+    public Sprite ProjectileSprite;
     public float AttackRadius = 5f;
     public float AttackRate = 1f;
     public int Strength = 10;
@@ -212,6 +214,7 @@ public class Ship : MonoBehaviour
     public int MaxAttackCount = 1;
     public int MaxHealth = 50;
     int _currentHealth;
+
 
     IEnumerator Attack()
     {
@@ -226,11 +229,13 @@ public class Ship : MonoBehaviour
             {
                 if (collider.tag != tag && attackCount < MaxAttackCount)
                 {
-                    if (Random.value <= Accuracy)
-                    {
-                        print($"{name} hit {collider.name}!");
-                        collider.SendMessage("Hit", Strength);
-                    }
+                    var projectileAngle = Vector2.SignedAngle(Vector3.left, collider.transform.position - transform.position);
+                    var projectileRotation = Quaternion.Euler(0, 0, projectileAngle);
+                    var projectileObject = Instantiate(ProjectilePrefab, transform.position, projectileRotation);
+                    var projectile = projectileObject.GetComponent<Projectile>();
+
+                    projectile.Fire(collider.gameObject, ProjectileSprite, Random.value <= Accuracy, Strength);
+                    
                     attackCount++;
                 }
             }
@@ -239,7 +244,7 @@ public class Ship : MonoBehaviour
         }
     }
 
-    void Hit(int damage)
+    public void Hit(int damage)
     {
         _currentHealth -= damage;
         print($"{name} health: {_currentHealth}");

@@ -155,10 +155,15 @@ MonoBehaviour:
   TurnMax: 10
   TurnAccel: 4
   TurnSnap: 0.001
+  TurnCur: 0
   SpeedMax: 4
   SpeedAccel: 0.8
   SpeedSnap: 0.01
+  SpeedCur: 0
   move: 1
+  target: {x: 0, y: 0, z: 0}
+  ProjectilePrefab: {fileID: 616355237121890902, guid: 20684ef51ef5712059062a74659a6dc4, type: 3}
+  ProjectileSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   AttackRadius: 5
   AttackRate: 1
   Strength: 5
@@ -544,10 +549,15 @@ MonoBehaviour:
   TurnMax: 10
   TurnAccel: 4
   TurnSnap: 0.001
+  TurnCur: 0
   SpeedMax: 10
   SpeedAccel: 0.8
   SpeedSnap: 0.001
+  SpeedCur: 0
   move: 1
+  target: {x: 0, y: 0, z: 0}
+  ProjectilePrefab: {fileID: 616355237121890902, guid: 20684ef51ef5712059062a74659a6dc4, type: 3}
+  ProjectileSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   AttackRadius: 2
   AttackRate: 1
   Strength: 2
@@ -1477,10 +1487,15 @@ MonoBehaviour:
   TurnMax: 10
   TurnAccel: 4
   TurnSnap: 0.001
+  TurnCur: 0
   SpeedMax: 10
   SpeedAccel: 0.8
   SpeedSnap: 0.001
+  SpeedCur: 0
   move: 1
+  target: {x: 0, y: 0, z: 0}
+  ProjectilePrefab: {fileID: 616355237121890902, guid: 20684ef51ef5712059062a74659a6dc4, type: 3}
+  ProjectileSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   AttackRadius: 5
   AttackRate: 1
   Strength: 10
