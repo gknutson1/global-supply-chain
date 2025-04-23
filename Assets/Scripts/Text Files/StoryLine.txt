@@ -1,0 +1,61 @@
+Story text 
+
+Global Supply Chain
+
+Defend the world's vital shipping lanes as a newly commissioned Naval officer. 
+
+Attack and counter enemies in real-time as you progress through the ranks to become an Admiral. 
+
+Complete new levels and objectives as you navigate your ships through international waters. 
+
+Take on the high seas in this naval strategy game designed to test your tactics as you protect global trade. 
+
+-or- 
+
+Take on pirates and enemy maritime fleets in this real-time high seas strategy game.
+
+
+
+Levels/Maps
+
+ 
+Strait of Malacca - Connects the Pacific and Indian Oceans through the populated island chains of South Asia. Watch out for local merchant fleets. 
+
+Strait of Hormuz - Vital oil route containing a narrow chokepoint connecting the Persian Gulf and the Arabian Sea. Pirates stalk these waters. 
+
+Taiwan Strait - a highly contested waterway 110 miles wide in the South China Sea. Military patrols and unfriendly coast guard and fisherman are a common sight in these waters. 
+
+Northern Sea Route - polar shipping route along the Arctic coast of Russia. Ice bergs and whales can be surprisingly dangerous in these waters.
+Levels 
+	0. Tutorial
+	1. Strait of Hormuz
+	2. Strait of Malacca
+	3. Taiwan Strait
+	4. Islands of the South Pacific
+	5. Strait of Magellan
+	6. Northern Sea Route
+
+Ranks
+	(Officers)
+	Ensign 
+	Lieutenant
+	Commander
+	Captain
+	Admiral
+
+Ships
+	Corvette
+	Frigate
+	Destroyer
+	Battleship
+	Carrier
+	Submarine
+
+3D modern battleship image visited 4/21/25 https://cimsec.org/readiness-for-pacific-war-2027/
+Opengameart.org -> soundfx and beach/grass tiles
+OpenGameart.org Author: Chasersgaming NPC Navy character 
+Soundimage.org -> nothing but is a source we can use if we want to add music and battle fx
+Japanese Style War ships adapted from https://forum.cosmoteer.net/  credit to the designers on 5416-warship-creation-factory-ww2-with-mods forum
+US Battleships http://www.navweaps.com/Weapons/WNUS_16-45_mk6.php USS Alabama
+
+Credit for names and descriptions of the waterways https://www.morethanshipping.com/the-worlds-top-10-strategic-straits-and-channels/

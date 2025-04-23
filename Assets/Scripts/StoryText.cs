@@ -30,6 +30,11 @@ public class StoryText : MonoBehaviour
         new() {
             "Welcome to the Navy, Lieutenant. Are you ready to defend the world's oceans from hostile forces?",
             "Congrats, your ship is a corvette-class: nimble yet powerful. Perfect for hunting pirates in these waters.",
+            "Let's get oriented with the controls first. Use the mouse to select your bearing. ",
+            "Global Supply Chain is a real time naval strategy game.",
+            "Protect your fleet and navigate while taking fire from enemies big and small.",
+            "Rank up and unlock new ships and oceans as you face new enemies",
+            "Survive and rule the supply chain",
             
         },
         //Chapter 1
@@ -43,7 +48,32 @@ public class StoryText : MonoBehaviour
             "Chapter 2: Strait of Malacca",
             "Commander, the narrow chokepoints through the strait cause many captains to slow down ",
             "which makes their ships easy targets for pirates. "
-        }
+        },
+         //Chapter 3
+        new() {
+            "Chapter 3: Taiwan Strait",
+            "Commander, drills often occur in this area. Only 110 miles separate the island from the mainland.", 
+            "Military patrols and unfriendly coast guard and fisherman are a common sight in these waters. ",
+        },
+        //Chapter 4
+        new() {
+            "Chapter 4:  Islands of the South Pacific",
+             ".",
+            " ",
+        },
+         //Chapter 5
+        new() {
+            "Chapter 5: Strait of Magellan",
+             ".",
+            " ",
+        },
+         //Chapter 6
+        new() {
+            "Chapter 6: Northern Sea Route",
+            ".",
+            " ",
+        },
+
     };
 
     void Start()
