@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      yubari_cruiser_0: 677613700344485303
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

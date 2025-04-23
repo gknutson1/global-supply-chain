@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      momi_destroyer_0: 2737888854313358211
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

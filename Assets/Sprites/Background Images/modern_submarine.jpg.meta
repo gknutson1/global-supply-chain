@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      modern_submarine_0: 1668271737344711096
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

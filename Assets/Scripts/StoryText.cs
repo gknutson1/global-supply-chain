@@ -93,7 +93,7 @@ public class StoryText : MonoBehaviour
             else if (line < storyText[level].Count - 1)
                 DisplayNextLine();
             else
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("Level{level}");
     }
 
     public void Pause(bool pause)

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      patrol_boat1.1_0: -7735574297352470410
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

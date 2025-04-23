@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      yamato_battleship_resize_0: -2167445650489502801
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
