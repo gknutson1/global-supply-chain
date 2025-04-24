@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
 
 public class GameManager : MonoBehaviour {
 
@@ -24,6 +25,10 @@ public class GameManager : MonoBehaviour {
         _scrollAction = InputSystem.actions.FindAction("Zoom");
 
         _persistentVariables = FindAnyObjectByType<PersistentVariables>();
+
+        _minBounds = tilemap.LocalToWorld(tilemap.localBounds.min);
+        _maxBounds = tilemap.LocalToWorld(tilemap.localBounds.max);
+        ScrollMax = Mathf.Min(ScrollMax, (_maxBounds.x - _minBounds.x) * Screen.height / Screen.width / 2, (_maxBounds.y - _minBounds.y) / 2);
     }
     
     /// Get position of the mouse as a unity coordinate (zeroed out)
@@ -77,7 +82,10 @@ public class GameManager : MonoBehaviour {
     private InputAction _scrollAction;
     private const float ScrollSpeed = 100;
     private const float ScrollMin = 2;
-    private const float ScrollMax = 80;
+    private float ScrollMax = 80;
+    public Tilemap tilemap;
+    private Vector2 _minBounds;
+    private Vector2 _maxBounds; 
 
     private void OnScroll() {
         // Get the old world position of mouse
@@ -86,7 +94,7 @@ public class GameManager : MonoBehaviour {
         _camera.orthographicSize = Mathf.Clamp(
             // -1 because otherwise the scroll direction is inverted.
             _camera.orthographicSize + ScrollSpeed * Time.deltaTime * (-1 * _scrollAction.ReadValue<float>()), 
-            ScrollMin, 
+            ScrollMin,
             ScrollMax
         );
         
@@ -94,7 +102,13 @@ public class GameManager : MonoBehaviour {
         Vector3 newPos = MousePosition();
 
         // Adjust the position of the camera based off of the difference between the new and old mouse positions
-        _camera.transform.position += (prevPos - newPos);
+        _camera.transform.position += prevPos - newPos;
+
+        _camera.transform.position = new Vector3 (
+            Mathf.Clamp(_camera.transform.position.x, _minBounds.x + _camera.orthographicSize * Screen.width / Screen.height, _maxBounds.x - _camera.orthographicSize * Screen.width / Screen.height),
+            Mathf.Clamp(_camera.transform.position.y, _minBounds.y + _camera.orthographicSize, _maxBounds.y - _camera.orthographicSize),
+            _camera.transform.position.z
+        );
     }
 
     public Canvas pauseMenu;

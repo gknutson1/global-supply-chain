@@ -1,6 +1,5 @@
 using System.Collections;
 using JetBrains.Annotations;
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class Ship : MonoBehaviour
