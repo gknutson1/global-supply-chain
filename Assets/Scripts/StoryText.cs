@@ -28,12 +28,17 @@ public class StoryText : MonoBehaviour
     readonly List<List<string>> storyText = new() {
         // Chapter 0 text
         new() {
-            "Welcome to the Navy, Lieutenant. Are you ready to defend the world's oceans from hostile forces?",
+            "Welcome to the Navy, Ensign. Are you ready to defend the world's oceans from hostile forces?",
             "Congrats, your ship is a corvette-class: nimble yet powerful. Perfect for hunting pirates in these waters.",
-            "Let's get oriented with the controls first. Use the mouse to select your bearing. ",
-            "Global Supply Chain is a real time naval strategy game.",
+            "Let's get oriented with the controls first. Click the ship to select. See the green selection ring. Great!",
+            "Now let's get this ship moving. Left-click and drag the mouse to select a destination Lieutenant. Right-Click to set it. ",
+            "Ship speed, and turning are upgradeable with experience points. Fire power and accuracy can also be upgraded.",
+            "The green health bar beneath the ship indicates current ship health points.",
+            "Ships automatically target enemies within range. To fire, navigate toward the enemy ship. Once in range, your crew will start firing.",
+             // to do continue tutorial
+            "Global Supply Chain is a real time naval strategy game. To win you must outmaneuver your opponents. Protect your crew and survive.",
             "Protect your fleet and navigate while taking fire from enemies big and small.",
-            "Rank up and unlock new ships and oceans as you face new enemies",
+            "Rank up to unlock new ships and missions as you face new enemies throughout the world",
             "Survive and rule the supply chain",
             
         },
@@ -41,37 +46,40 @@ public class StoryText : MonoBehaviour
         new() {
             "Chapter 1: Strait of Hormuz", 
             "This vital oil route winds to a narrow strip as the Persian Gulf and the Arabian Sea converge.",
-            "Warning: Hostiles seen in these waters. "
+            "Warning: Hostiles seen in these waters.",
+            "Use your superior fire-power to secure the area for commercial traffic."
         },
         //Chapter 2
         new() {
             "Chapter 2: Strait of Malacca",
-            "Commander, the narrow chokepoints through the strait cause many captains to slow down ",
-            "which makes their ships easy targets for pirates. "
+            "Congratulations on your promotion, Junior Lieutenant, the narrow chokepoints through the strait cause many captains to slow down ",
+            "making their ships easy targets for pirates. Be prepared for combat. These aren't the pirates of the Caribbean. "
         },
          //Chapter 3
         new() {
             "Chapter 3: Taiwan Strait",
-            "Commander, drills often occur in this area. Only 110 miles separate the island from the mainland.", 
-            "Military patrols and unfriendly coast guard and fisherman are a common sight in these waters. ",
+            "Lieutenant, drills often occur in this area. Only 110 miles separate the island from the mainland.", 
+            "Military patrols and unfriendly coast guard and fisherman are a common sight in these waters. "
         },
         //Chapter 4
         new() {
             "Chapter 4:  Islands of the South Pacific",
-             ".",
-            " ",
+             "Welcome to Guam Commander. The beaches have been fortified in case of invasion, no holiday for your crew unfortunately.",
+              "The enemy is attempting to blockade the island and we must break through with our remaining fleet. Your acumen for battle will decide who controls the Pacific.",
         },
          //Chapter 5
         new() {
             "Chapter 5: Strait of Magellan",
-             ".",
-            " ",
+             "Sir, we are passing by Cape Horn on the port side of the vessel. We should have easy passage as long as the winds cooperate.",
+              "A Captain of the carrier strike group is quite an achievement. Let's hope the Atlantic is more friendly to us. ",
+              "Spoke too soon. Looks like someone was waiting for our group. Arms ready!"
         },
          //Chapter 6
         new() {
             "Chapter 6: Northern Sea Route",
-            ".",
-            " ",
+            "Admiral, what is a nuclear powered attack submarine doing in Greenland? Nevermind, it's probably classified...",
+            "We shouldn't encouter much ice this time of year but I'm sure we won't be alone once we enter the disputed economic zone.",
+            "There have been reports of fighter jets attacking ships. Be decisive, hate to get a scratch on this billion dollar submarine."
         },
 
     };

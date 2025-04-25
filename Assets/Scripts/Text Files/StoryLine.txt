@@ -38,6 +38,7 @@ Levels
 Ranks
 	(Officers)
 	Ensign 
+	Junior Lieutenant
 	Lieutenant
 	Commander
 	Captain
@@ -51,11 +52,22 @@ Ships
 	Carrier
 	Submarine
 
+Interesting video on shipping and sea routes: https://www.youtube.com/watch?v=YglecejIkhg
+
 3D modern battleship image visited 4/21/25 https://cimsec.org/readiness-for-pacific-war-2027/
 Opengameart.org -> soundfx and beach/grass tiles
 OpenGameart.org Author: Chasersgaming NPC Navy character 
+Submarine soundfx 
+Credit: https://www.patreon.com/fethalis for 2D water map tiles
+Sea Warfare set Author: Lowder2
 Soundimage.org -> nothing but is a source we can use if we want to add music and battle fx
 Japanese Style War ships adapted from https://forum.cosmoteer.net/  credit to the designers on 5416-warship-creation-factory-ww2-with-mods forum
 US Battleships http://www.navweaps.com/Weapons/WNUS_16-45_mk6.php USS Alabama
 
 Credit for names and descriptions of the waterways https://www.morethanshipping.com/the-worlds-top-10-strategic-straits-and-channels/
+
+Unity Store Free Assets
+
+explosion fx https://assetstore.unity.com/packages/vfx/particles/war-fx-5669#description
+
+water effect  https://assetstore.unity.com/packages/2d/textures-materials/water/simple-water-shader-hdrp-207454#content didn't work in 2d

@@ -265,6 +265,6 @@ public class Ship : MonoBehaviour
     {
         _currentHealth -= damage;
         _healthBar.UpdateHealthBar((float)_currentHealth / MaxHealth);
-        if (_currentHealth <= 0) Destroy(gameObject);
+        if (_currentHealth <= 0) Destroy(gameObject);   
     }
 }
