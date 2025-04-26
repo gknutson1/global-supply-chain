@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Iowa_battleship_0: 9183346444764894600
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

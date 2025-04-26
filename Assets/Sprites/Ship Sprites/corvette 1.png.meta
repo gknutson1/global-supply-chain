@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      corvette 1_0: -1806996668839888105
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
