@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PlaneF-35Lightning2_0: -4626915497236687688
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ShipSubMarineHull_0: 9223006396201906871
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

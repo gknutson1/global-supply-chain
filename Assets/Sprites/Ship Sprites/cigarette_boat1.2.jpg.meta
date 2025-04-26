@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cigarette_boat1.2_0: 3914831955565073119
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
