@@ -227,6 +227,7 @@ public class Ship : MonoBehaviour
     public float Accuracy = 1f;
     public int MaxAttackCount = 1;
     public int MaxHealth = 50;
+    public float Evasion = 0f;
     int _currentHealth;
 
 
@@ -248,7 +249,7 @@ public class Ship : MonoBehaviour
                     var projectileObject = Instantiate(ProjectilePrefab, transform.position, projectileRotation);
                     var projectile = projectileObject.GetComponent<Projectile>();
 
-                    projectile.Fire(collider, ProjectileSprite, Random.value <= Accuracy, Strength);
+                    projectile.Fire(collider, ProjectileSprite, Random.value <= Accuracy * (1f - Evasion), Strength);
                     
                     attackCount++;
                 }
