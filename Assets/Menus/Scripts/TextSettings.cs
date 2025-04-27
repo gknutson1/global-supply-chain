@@ -38,27 +38,27 @@ public class TextSettings : MonoBehaviour
     {
         var newDyslexiaFriendlyFontSetting = PlayerPrefs.GetInt("Dyxlexia-friendly Font", currentDyslexiaFriendlyFontSetting ? 1 : 0) == 1;
         if (newDyslexiaFriendlyFontSetting != currentDyslexiaFriendlyFontSetting)
-            setDyslexiaFriendlyFontSetting(newDyslexiaFriendlyFontSetting);
+            SetDyslexiaFriendlyFontSetting(newDyslexiaFriendlyFontSetting);
 
         var newAdhdFriendlyFontSetting = PlayerPrefs.GetInt("ADHD-friendly Text", currentAdhdFriendlyTextSetting ? 1 : 0) == 1 | alwaysAdhdFriendly;
         if (newAdhdFriendlyFontSetting != currentAdhdFriendlyTextSetting)
-            setAdhdFriendlyTextSetting(newAdhdFriendlyFontSetting);
+            SetAdhdFriendlyTextSetting(newAdhdFriendlyFontSetting);
     }
 
-    void setDyslexiaFriendlyFontSetting(bool isEnabled)
+    void SetDyslexiaFriendlyFontSetting(bool isEnabled)
     {
         textComponent.font = isEnabled ? dyslexiaFriendlyFont : defaultFont;
         currentDyslexiaFriendlyFontSetting = isEnabled;
     }
 
-    void setAdhdFriendlyTextSetting(bool isEnabled)
+    void SetAdhdFriendlyTextSetting(bool isEnabled)
     {
-        textComponent.text = isEnabled ? generateAdhdFriendlyText(textComponent.text) : defaultText;
+        textComponent.text = isEnabled ? GenerateAdhdFriendlyText(textComponent.text) : defaultText;
         textComponent.fontStyle ^= defaultIsBold ? FontStyles.Bold : FontStyles.Normal;
         currentAdhdFriendlyTextSetting = isEnabled;
     }
 
-    string generateAdhdFriendlyText(string text)
+    string GenerateAdhdFriendlyText(string text)
     {
         var regex = new Regex("[A-Za-z]+(?:'[A-Za-z]+)*");
         var adhdFriendlyText = string.Empty;

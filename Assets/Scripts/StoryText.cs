@@ -149,27 +149,27 @@ public class StoryText : MonoBehaviour
     {
         StopCoroutine(coroutine);
         isAnimating = false;
-        textComponent.text = currentAdhdFriendlyTextSetting ? generateAdhdFriendlyText(storyText[level][line]) : storyText[level][line];
+        textComponent.text = currentAdhdFriendlyTextSetting ? GenerateAdhdFriendlyText(storyText[level][line]) : storyText[level][line];
     }
 
     void UpdateTextSettings()
     {
         var newDyslexiaFriendlyFontSetting = PlayerPrefs.GetInt("Dyxlexia-friendly Font", currentDyslexiaFriendlyFontSetting ? 1 : 0) == 1;
         if (newDyslexiaFriendlyFontSetting != currentDyslexiaFriendlyFontSetting)
-            setDyslexiaFriendlyFontSetting(newDyslexiaFriendlyFontSetting);
+            SetDyslexiaFriendlyFontSetting(newDyslexiaFriendlyFontSetting);
 
         var newAdhdFriendlyFontSetting = PlayerPrefs.GetInt("ADHD-friendly Text", currentAdhdFriendlyTextSetting ? 1 : 0) == 1;
         if (newAdhdFriendlyFontSetting != currentAdhdFriendlyTextSetting)
-            setAdhdFriendlyTextSetting(newAdhdFriendlyFontSetting);
+            SetAdhdFriendlyTextSetting(newAdhdFriendlyFontSetting);
     }
 
-    void setDyslexiaFriendlyFontSetting(bool isEnabled)
+    void SetDyslexiaFriendlyFontSetting(bool isEnabled)
     {
         textComponent.font = isEnabled ? dyslexiaFriendlyFont : defaultFont;
         currentDyslexiaFriendlyFontSetting = isEnabled;
     }
 
-    void setAdhdFriendlyTextSetting(bool isEnabled)
+    void SetAdhdFriendlyTextSetting(bool isEnabled)
     {
         currentAdhdFriendlyTextSetting = isEnabled;
 
@@ -181,11 +181,11 @@ public class StoryText : MonoBehaviour
         }
         else if(line >= 0)
         {
-            textComponent.text = isEnabled ? generateAdhdFriendlyText(storyText[level][line]) : storyText[level][line];
+            textComponent.text = isEnabled ? GenerateAdhdFriendlyText(storyText[level][line]) : storyText[level][line];
         }
     }
 
-    string generateAdhdFriendlyText(string text)
+    string GenerateAdhdFriendlyText(string text)
     {
         var regex = new Regex("[A-Za-z]+(?:'[A-Za-z]+)*");
         var adhdFriendlyText = string.Empty;

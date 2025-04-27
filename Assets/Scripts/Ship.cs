@@ -101,12 +101,12 @@ public class Ship : MonoBehaviour
         angles.z += TurnCur * Time.deltaTime;
         gameObject.transform.eulerAngles = angles;
 
-        fixHealthBarLocation();
+        FixHealthBarLocation();
 
         return toMove;
     }
 
-    private void fixHealthBarLocation() {
+    private void FixHealthBarLocation() {
         _healthBarCanvas.transform.eulerAngles = Vector3.zero;
 
         Vector3 position = gameObject.transform.position;
@@ -180,7 +180,7 @@ public class Ship : MonoBehaviour
         _healthBarCanvas = GetComponentInChildren<Canvas>();
         _healthBar = _healthBarCanvas.GetComponentInChildren<HealthBar>();
         _currentHealth = MaxHealth;
-        fixHealthBarLocation();
+        FixHealthBarLocation();
 
         StartCoroutine(Attack());
     }
@@ -242,7 +242,7 @@ public class Ship : MonoBehaviour
 
             foreach (var collider in hitColliders)
             {
-                if (collider.tag != tag && attackCount < MaxAttackCount)
+                if (!CompareTag(collider.tag) && attackCount < MaxAttackCount)
                 {
                     var projectileAngle = Vector2.SignedAngle(Vector3.left, collider.transform.position - transform.position);
                     var projectileRotation = Quaternion.Euler(0, 0, projectileAngle);
