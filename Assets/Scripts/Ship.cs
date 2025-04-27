@@ -101,12 +101,12 @@ public class Ship : MonoBehaviour
         angles.z += TurnCur * Time.deltaTime;
         gameObject.transform.eulerAngles = angles;
 
-        fixHealthBarLocation();
+        FixHealthBarLocation();
 
         return toMove;
     }
 
-    private void fixHealthBarLocation() {
+    private void FixHealthBarLocation() {
         _healthBarCanvas.transform.eulerAngles = Vector3.zero;
 
         Vector3 position = gameObject.transform.position;
@@ -180,7 +180,7 @@ public class Ship : MonoBehaviour
         _healthBarCanvas = GetComponentInChildren<Canvas>();
         _healthBar = _healthBarCanvas.GetComponentInChildren<HealthBar>();
         _currentHealth = MaxHealth;
-        fixHealthBarLocation();
+        FixHealthBarLocation();
 
         StartCoroutine(Attack());
     }
@@ -227,6 +227,7 @@ public class Ship : MonoBehaviour
     public float Accuracy = 1f;
     public int MaxAttackCount = 1;
     public int MaxHealth = 50;
+    public float Evasion = 0f;
     int _currentHealth;
 
 
@@ -241,14 +242,15 @@ public class Ship : MonoBehaviour
 
             foreach (var collider in hitColliders)
             {
-                if (collider.tag != tag && attackCount < MaxAttackCount)
+                if (!CompareTag(collider.tag) && attackCount < MaxAttackCount)
                 {
                     var projectileAngle = Vector2.SignedAngle(Vector3.left, collider.transform.position - transform.position);
                     var projectileRotation = Quaternion.Euler(0, 0, projectileAngle);
                     var projectileObject = Instantiate(ProjectilePrefab, transform.position, projectileRotation);
                     var projectile = projectileObject.GetComponent<Projectile>();
+                    var targetShip = collider.GetComponent<Ship>();
 
-                    projectile.Fire(collider, ProjectileSprite, Random.value <= Accuracy, Strength);
+                    projectile.Fire(collider, ProjectileSprite, Random.value <= Accuracy * (1f - targetShip.Evasion), Strength);
                     
                     attackCount++;
                 }

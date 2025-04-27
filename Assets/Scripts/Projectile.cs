@@ -46,8 +46,13 @@ public class Projectile : MonoBehaviour
                         ship.Hit(damage);
 
                         Instantiate(explosionAnimation, transform.position, Quaternion.identity);
+                        StartCoroutine(PlaySoundandDestroy());
                     }
-                    StartCoroutine(PlaySoundandDestroy());
+                    else
+                    {
+                        Instantiate(splashAnimation, transform.position, Quaternion.identity);
+                        Destroy(gameObject);
+                    }
                 }
                 else Destroy(gameObject);
             }
