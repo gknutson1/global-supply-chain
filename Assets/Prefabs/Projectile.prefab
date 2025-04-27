@@ -199,5 +199,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionAnimation: {fileID: 100014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
-  splashAnimation: {fileID: 0}
-  explosionAudio: {fileID: 8300000, guid: 5992a5b2924a84247ba6388e3f193960, type: 3}
+  splashAnimation: {fileID: 2071714190621312253, guid: 2897f2160e7e2d53aa9066a75686d1c5, type: 3}
