@@ -248,8 +248,9 @@ public class Ship : MonoBehaviour
                     var projectileRotation = Quaternion.Euler(0, 0, projectileAngle);
                     var projectileObject = Instantiate(ProjectilePrefab, transform.position, projectileRotation);
                     var projectile = projectileObject.GetComponent<Projectile>();
+                    var targetShip = collider.GetComponent<Ship>();
 
-                    projectile.Fire(collider, ProjectileSprite, Random.value <= Accuracy * (1f - Evasion), Strength);
+                    projectile.Fire(collider, ProjectileSprite, Random.value <= Accuracy * (1f - targetShip.Evasion), Strength);
                     
                     attackCount++;
                 }
