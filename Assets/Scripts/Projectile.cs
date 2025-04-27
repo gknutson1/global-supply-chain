@@ -1,9 +1,10 @@
-using Mono.Cecil.Cil;
+using System.Collections;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
+    AudioSource audioSource;
     GameObject targetShip;
     Collider2D targetCollider;
     Vector2 targetPosition;
@@ -11,6 +12,14 @@ public class Projectile : MonoBehaviour
     bool success;
     int damage;
     float speed = 5f;
+
+    public GameObject explosionAnimation;
+    public GameObject splashAnimation;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -35,11 +44,28 @@ public class Projectile : MonoBehaviour
                     {
                         var ship = targetShip.GetComponent<Ship>();
                         ship.Hit(damage);
+
+                        Instantiate(explosionAnimation, transform.position, Quaternion.identity);
                     }
+                    StartCoroutine(PlaySoundandDestroy());
                 }
-                Destroy(gameObject);
+                else Destroy(gameObject);
             }
         }
+    }
+
+    IEnumerator PlaySoundandDestroy()
+    {
+        fired = false;
+        spriteRenderer.enabled = false;
+        audioSource.Play();
+
+        while (audioSource.isPlaying)
+        {
+            yield return new WaitForSeconds(0.5f);
+        }
+
+        Destroy(gameObject);
     }
 
     public void Fire(Collider2D target, Sprite sprite, bool success, int damage)
