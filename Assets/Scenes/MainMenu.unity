@@ -758,7 +758,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   supply: 0
-  ships: []
+  ships:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &426456818
 Transform:
   m_ObjectHideFlags: 0
