@@ -28,9 +28,7 @@ For Linux:
 3. Execute gsc.bin.x86_64
 
 ********************************************************
-NOTE to PLAYERS: Level 6 doesn't exist... we only implemented levels 1-5. If you have reached the narrative for level 6.... you have acheived the rank of admiral, 
-
-and won the game. Congratulations!
+NOTE to PLAYERS: Level 6 doesn't exist... we only implemented levels 1-5. If you have reached the narrative for level 6.... you have acheived the rank of admiral, and won the game. Congratulations!
 
 ********************************************************
 Credits
