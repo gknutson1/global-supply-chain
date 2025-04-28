@@ -183,7 +183,6 @@ public class GameManager : MonoBehaviour
     public void TogglePauseGame()
     {
         isPaused ^= true;
-        // TODO: Add logic for actually pausing the game while the pause menu is displayed (or resuming when it is not).
         Time.timeScale = isPaused ? 0f : 1f;
         pauseMenu.enabled = isPaused;
         optionsMenu.enabled = false;
@@ -198,5 +197,29 @@ public class GameManager : MonoBehaviour
     {
         Destroy(_persistentVariables.gameObject);
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void OnShipDestroyed() {
+        var playerShips = GameObject.FindGameObjectsWithTag("PlayerShip");
+        var enemyShips = GameObject.FindGameObjectsWithTag("EnemyShip");
+
+        foreach(var enemyShip in enemyShips)
+        {
+            print(enemyShip.name);
+        }
+
+        print($"Ship Destroyed! {playerShips} to {enemyShips}");
+
+        if(enemyShips.Length == 0) LevelWon();
+        else if (playerShips.Length == 0) LevelFailed();
+
+    }
+
+    void LevelFailed() {
+        GameOverCanvas.enabled = true;
+    }
+
+    void LevelWon() {
+        SceneManager.LoadScene("CutScene");
     }
 }
