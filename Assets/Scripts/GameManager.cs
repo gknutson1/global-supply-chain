@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 public class GameManager : MonoBehaviour
@@ -151,6 +152,7 @@ public class GameManager : MonoBehaviour
 
     public Canvas pauseMenu;
     public Canvas optionsMenu;
+    public Canvas GameOverCanvas;
     bool isPaused = false;
 
     // Pause the game and show the pause menu, or unpause the game and hide the pause menu.
@@ -158,7 +160,19 @@ public class GameManager : MonoBehaviour
     {
         isPaused ^= true;
         // TODO: Add logic for actually pausing the game while the pause menu is displayed (or resuming when it is not).
+        Time.timeScale = isPaused ? 0f : 1f;
         pauseMenu.enabled = isPaused;
         optionsMenu.enabled = false;
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene($"Level{_persistentVariables.level}");
+    }
+
+    public void GoToMainMenu()
+    {
+        Destroy(_persistentVariables.gameObject);
+        SceneManager.LoadScene("MainMenu");
     }
 }
