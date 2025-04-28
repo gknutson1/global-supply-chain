@@ -37,8 +37,8 @@ public class UpgradeManager : MonoBehaviour
         SupplyText = GameObject.Find("supply_indicator").GetComponent<TMP_Text>();
         OnUpgrade.AddListener(UpdateSupplyText);
         UpdateSupplyText();
-        GameObject.Find("continue").GetComponent<Button>().onClick
-            .AddListener(() => Debug.Log("Clicked!"));
+        GameObject.Find("level_indicator").GetComponent<TMP_Text>().SetText($"Level {pv.level}");
+        GameObject.Find("continue").GetComponent<Button>().onClick.AddListener(() => Debug.Log("Clicked!"));
     }
 
     // Update is called once per frame
