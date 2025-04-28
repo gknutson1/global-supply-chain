@@ -761,6 +761,16 @@ MonoBehaviour:
   ships:
   - {fileID: 0}
   - {fileID: 0}
+  level0NewShips:
+  - {fileID: 8335995643757438715, guid: bac01dfdcabc26441a9c72fcfa6ddde2, type: 3}
+  - {fileID: 3490349401768750273, guid: e72b4a57c8175474c97ead4d9c3a1d57, type: 3}
+  level1NewShips:
+  - {fileID: 0}
+  - {fileID: 0}
+  level2NewShips: []
+  level3NewShips: []
+  level4NewShips: []
+  level5NewShips: []
 --- !u!4 &426456818
 Transform:
   m_ObjectHideFlags: 0

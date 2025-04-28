@@ -49,6 +49,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3860181988404243693, guid: 8c7ca20a56af6709bb4d84bd682f6f36, type: 3}
+      propertyPath: Evasion
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860181988404243693, guid: 8c7ca20a56af6709bb4d84bd682f6f36, type: 3}
+      propertyPath: TurnCur
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860181988404243693, guid: 8c7ca20a56af6709bb4d84bd682f6f36, type: 3}
+      propertyPath: TurnAccel
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860181988404243693, guid: 8c7ca20a56af6709bb4d84bd682f6f36, type: 3}
       propertyPath: shipSprite
       value: 
       objectReference: {fileID: -5514297983988867234, guid: f61fb1ac6b9b3be4ea1a7900497f444c, type: 3}
