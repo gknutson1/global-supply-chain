@@ -757,6 +757,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
+  supply: 0
+  ships: []
 --- !u!4 &426456818
 Transform:
   m_ObjectHideFlags: 0
@@ -813,7 +815,7 @@ AudioSource:
   m_GameObject: {fileID: 576963589}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8978797440687173444, guid: 98097e96419e04b82a5df12fc9b9feea, type: 2}
   m_audioClip: {fileID: 8300000, guid: ed0e39a6910092068ad2b367628cd2ef, type: 3}
   m_Resource: {fileID: 8300000, guid: ed0e39a6910092068ad2b367628cd2ef, type: 3}
   m_PlayOnAwake: 1
