@@ -761,6 +761,29 @@ MonoBehaviour:
   ships:
   - {fileID: 0}
   - {fileID: 0}
+  level0NewShips:
+  - {fileID: 8335995643757438715, guid: bac01dfdcabc26441a9c72fcfa6ddde2, type: 3}
+  - {fileID: 3490349401768750273, guid: e72b4a57c8175474c97ead4d9c3a1d57, type: 3}
+  level1NewShips:
+  - {fileID: 2252697998299343834, guid: 74aa87020f7194543a7cecbbedd1bdc9, type: 3}
+  - {fileID: 3490349401768750273, guid: e72b4a57c8175474c97ead4d9c3a1d57, type: 3}
+  level2NewShips:
+  - {fileID: 8335995643757438715, guid: bac01dfdcabc26441a9c72fcfa6ddde2, type: 3}
+  - {fileID: 3153043550352560554, guid: e535ff792e56f8442bdf5c3de8cd2dc0, type: 3}
+  - {fileID: 1502425172928151059, guid: 2815ba07b7f282748a97e6df7e8702ef, type: 3}
+  level3NewShips:
+  - {fileID: 8479829190998557640, guid: 1d1f37d447a3c0c4da162c74a68d0d43, type: 3}
+  - {fileID: 3490349401768750273, guid: e72b4a57c8175474c97ead4d9c3a1d57, type: 3}
+  level4NewShips:
+  - {fileID: 9076837260623674165, guid: 02b1be830a5f02a4aa0e55b4dec8f576, type: 3}
+  - {fileID: 1502425172928151059, guid: 2815ba07b7f282748a97e6df7e8702ef, type: 3}
+  - {fileID: 3490349401768750273, guid: e72b4a57c8175474c97ead4d9c3a1d57, type: 3}
+  level5NewShips:
+  - {fileID: 6207494103417682385, guid: 6a846a84a2420f54a884297fcbf85dd8, type: 3}
+  - {fileID: 8479829190998557640, guid: 1d1f37d447a3c0c4da162c74a68d0d43, type: 3}
+  - {fileID: 3490349401768750273, guid: e72b4a57c8175474c97ead4d9c3a1d57, type: 3}
+  - {fileID: 3153043550352560554, guid: e535ff792e56f8442bdf5c3de8cd2dc0, type: 3}
+  - {fileID: 8335995643757438715, guid: bac01dfdcabc26441a9c72fcfa6ddde2, type: 3}
 --- !u!4 &426456818
 Transform:
   m_ObjectHideFlags: 0
