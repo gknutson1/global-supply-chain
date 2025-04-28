@@ -20,6 +20,7 @@ public class UpgradeManager : MonoBehaviour
     void Start()
     {
         pv = GameObject.Find("PersistentVariables").GetComponent<PersistentVariables>();
+        pv.supply = 400;
         
         // Add any new ships for this level
         switch (++pv.level) {
