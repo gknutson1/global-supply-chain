@@ -39,9 +39,7 @@ public class UpgradeManager : MonoBehaviour
         GameObject.Find("level_indicator").GetComponent<TMP_Text>().SetText($"Level {pv.level}");
     }
     
-    public void Continue() {
-        SceneManager.LoadScene($"Level{pv.level}");
-    }
+    public void Continue() => SceneManager.LoadScene($"Level{pv.level}");
 
     // Update is called once per frame
     void Update()
