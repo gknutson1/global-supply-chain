@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CutsceneManager : MonoBehaviour
 {
@@ -19,5 +20,10 @@ public class CutsceneManager : MonoBehaviour
         cutsceneCanvas.enabled = !isPaused;
         pauseMenu.enabled = isPaused;
         optionsMenu.enabled = false;
+    }
+
+    public void LoadShipBuilder()
+    {
+        SceneManager.LoadScene("ShipBuilder");
     }
 }
