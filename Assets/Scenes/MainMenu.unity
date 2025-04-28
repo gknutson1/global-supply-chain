@@ -1758,8 +1758,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvases:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 69448788}
+  - {fileID: 6460705}
   - {fileID: 403857101}
 --- !u!114 &862549052
 MonoBehaviour:
