@@ -29,7 +29,6 @@ public class UpgradeManager : MonoBehaviour
             container.transform.SetParent(shipContainer.transform);
             container.GetComponent<RectTransform>().anchoredPosition = new Vector2(width, 0);
             width += container.GetComponent<RectTransform>().rect.width + 10;
-            container.SetActive(true);
         }
 
         Debug.Log(width);
@@ -38,7 +37,10 @@ public class UpgradeManager : MonoBehaviour
         OnUpgrade.AddListener(UpdateSupplyText);
         UpdateSupplyText();
         GameObject.Find("level_indicator").GetComponent<TMP_Text>().SetText($"Level {pv.level}");
-        GameObject.Find("continue").GetComponent<Button>().onClick.AddListener(() => Debug.Log("Clicked!"));
+    }
+    
+    public void Continue() {
+        SceneManager.LoadScene($"Level{pv.level}");
     }
 
     // Update is called once per frame
