@@ -150,6 +150,7 @@ public class GameManager : MonoBehaviour
     }
 
     public Canvas pauseMenu;
+    public Canvas optionsMenu;
     bool isPaused = false;
 
     // Pause the game and show the pause menu, or unpause the game and hide the pause menu.
@@ -158,5 +159,6 @@ public class GameManager : MonoBehaviour
         isPaused ^= true;
         // TODO: Add logic for actually pausing the game while the pause menu is displayed (or resuming when it is not).
         pauseMenu.enabled = isPaused;
+        optionsMenu.enabled = false;
     }
 }

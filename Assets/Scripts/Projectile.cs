@@ -10,7 +10,7 @@ public class Projectile : MonoBehaviour
     Vector2 targetPosition;
     bool fired = false;
     bool success;
-    int damage;
+    float damage;
     float speed = 5f;
 
     public GameObject explosionAnimation;
@@ -73,7 +73,7 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void Fire(Collider2D target, Sprite sprite, bool success, int damage)
+    public void Fire(Collider2D target, Sprite sprite, bool success, float damage)
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = sprite;

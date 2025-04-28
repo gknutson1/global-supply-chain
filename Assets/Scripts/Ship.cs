@@ -223,12 +223,12 @@ public class Ship : MonoBehaviour
     public Sprite ProjectileSprite;
     public float AttackRadius = 5f;
     public float AttackRate = 1f;
-    public int Strength = 10;
+    public float Strength = 10;
     public float Accuracy = 1f;
     public int MaxAttackCount = 1;
-    public int MaxHealth = 50;
+    public float MaxHealth = 50;
     public float Evasion = 0f;
-    int _currentHealth;
+    float _currentHealth;
 
 
     IEnumerator Attack()
@@ -263,7 +263,7 @@ public class Ship : MonoBehaviour
     private Canvas _healthBarCanvas;
     private HealthBar _healthBar;
 
-    public void Hit(int damage)
+    public void Hit(float damage)
     {
         _currentHealth -= damage;
         _healthBar.UpdateHealthBar((float)_currentHealth / MaxHealth);
