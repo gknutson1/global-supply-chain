@@ -48,12 +48,82 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3860181988404243693, guid: 8c7ca20a56af6709bb4d84bd682f6f36, type: 3}
+      propertyPath: shipSprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860181988404243693, guid: 8c7ca20a56af6709bb4d84bd682f6f36, type: 3}
+      propertyPath: shipColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860181988404243693, guid: 8c7ca20a56af6709bb4d84bd682f6f36, type: 3}
+      propertyPath: shipColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860181988404243693, guid: 8c7ca20a56af6709bb4d84bd682f6f36, type: 3}
+      propertyPath: shipColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860181988404243693, guid: 8c7ca20a56af6709bb4d84bd682f6f36, type: 3}
+      propertyPath: ProjectilePrefab
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3860181988404243693, guid: 8c7ca20a56af6709bb4d84bd682f6f36, type: 3}
+      propertyPath: ProjectileSprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9082752348609510164, guid: 8c7ca20a56af6709bb4d84bd682f6f36, type: 3}
       propertyPath: m_Name
-      value: Ship
+      value: EnemyShip
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9082752348609510164, guid: 8c7ca20a56af6709bb4d84bd682f6f36, type: 3}
+      propertyPath: m_TagString
+      value: EnemyShip
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3860181988404243693, guid: 8c7ca20a56af6709bb4d84bd682f6f36, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9082752348609510164, guid: 8c7ca20a56af6709bb4d84bd682f6f36, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 3182916905359015193}
   m_SourcePrefab: {fileID: 100100000, guid: 8c7ca20a56af6709bb4d84bd682f6f36, type: 3}
+--- !u!1 &767568529404436984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9082752348609510164, guid: 8c7ca20a56af6709bb4d84bd682f6f36, type: 3}
+  m_PrefabInstance: {fileID: 8406699475025615596}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3182916905359015193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767568529404436984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d6c6a50df4bb24a90b95101061736f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipColor: {r: 1, g: 0, b: 0, a: 0}
+  shipSprite: {fileID: 0}
+  TurnMax: 10
+  TurnAccel: 4
+  TurnSnap: 0.001
+  TurnCur: 0
+  SpeedMax: 10
+  SpeedAccel: 0.8
+  SpeedSnap: 0.001
+  SpeedCur: 0
+  move: 1
+  target: {x: 0, y: 0, z: 0}
+  ProjectilePrefab: {fileID: 616355237121890902, guid: 20684ef51ef5712059062a74659a6dc4, type: 3}
+  ProjectileSprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  AttackRadius: 5
+  AttackRate: 1
+  Strength: 10
+  Accuracy: 1
+  MaxAttackCount: 1
+  MaxHealth: 50
+  Evasion: 0
