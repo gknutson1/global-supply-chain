@@ -10,7 +10,7 @@ For Windows:
 
 1. Download the ZIP file
 2. Extract the file
-3. Run gsc.exe
+3. Run Global Supply Chain.exe
 4. Open to Play
 
 For MAC:
@@ -33,6 +33,8 @@ Credits
 
 Created by Collin Deel, Gunnar Knutson, and John Montejo
 Unity 6 Version (6000.044f1)
+
+This game was created without any use of generative AI.
 
 3D modern battleship image visited 4/21/25 https://cimsec.org/readiness-for-pacific-war-2027/
 Opengameart.org -> soundfx and beach/grass tiles
