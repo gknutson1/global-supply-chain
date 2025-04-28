@@ -156,14 +156,8 @@ public class Ship : MonoBehaviour
     {
         if (!move) return;
         Vector3 position = gameObject.transform.position;
-<<<<<<< HEAD
-
-        if (Mathf.Abs(remain) > Mathf.Lerp(45, 0, SpeedCur / SpeedMax) || distToDest / SpeedCur <= remain / TurnCur)
-        {
-=======
                 
         if (Mathf.Abs(remain) > Mathf.Lerp(45, 0, SpeedCur / SpeedMax) || distToDest / SpeedCur <= remain / TurnCur ||  Vector3.Distance(position, target) < 1f) {
->>>>>>> refs/remotes/origin/main
             SpeedCur = Mathf.MoveTowards(SpeedCur, 0, SpeedAccel * Time.deltaTime);
         }
         else
