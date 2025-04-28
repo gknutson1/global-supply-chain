@@ -4,6 +4,7 @@ using UnityEngine.Events;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Runtime.CompilerServices;
 
 public class UpgradeManager : MonoBehaviour
 {
@@ -40,16 +41,37 @@ public class UpgradeManager : MonoBehaviour
     }
     
     public void Continue() {
-        SceneManager.LoadScene($"Level{pv.level}");
+        pv.level++;
+        SceneManager.LoadScene($"Story");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+            TogglePause();
     }
 
     void UpdateSupplyText() {
         SupplyText.SetText($"Supply: {pv.supply}");
+    }
+
+    public Canvas UpgradeManagerCanvas;
+    public Canvas PauseMenu;
+    public Canvas OptionsMenu;
+
+    bool isPaused = false;
+
+    public void TogglePause()
+    {
+        isPaused ^= true;
+        UpgradeManagerCanvas.enabled = !isPaused;
+        PauseMenu.enabled = isPaused;
+        OptionsMenu.enabled = false;
+    }
+
+    public void LoadShipBuilder()
+    {
+        SceneManager.LoadScene("ShipBuilder");
     }
 }

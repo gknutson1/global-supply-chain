@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2777962594575170497}
   - component: {fileID: 8002964272949883862}
   - component: {fileID: 243839931690573630}
+  - component: {fileID: 7950404819380381269}
   m_Layer: 5
   m_Name: name
   m_TagString: Untagged
@@ -136,6 +137,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7950404819380381269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181198047562515084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &261857066246421761
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +245,7 @@ GameObject:
   - component: {fileID: 4867451105162300697}
   - component: {fileID: 7508004274139429892}
   - component: {fileID: 1323039316275365544}
+  - component: {fileID: 1466060913390132611}
   m_Layer: 5
   m_Name: stat_2_name
   m_TagString: Untagged
@@ -355,6 +371,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1466060913390132611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307654424877275134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &516591365216618805
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,6 +396,7 @@ GameObject:
   - component: {fileID: 694931735702680600}
   - component: {fileID: 876742461875924174}
   - component: {fileID: 1851550896162792544}
+  - component: {fileID: 5315058207920628872}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -491,6 +522,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5315058207920628872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516591365216618805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &567786214371038515
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +547,7 @@ GameObject:
   - component: {fileID: 5140889775314476312}
   - component: {fileID: 6455140624573700286}
   - component: {fileID: 8743504911579389707}
+  - component: {fileID: 7691489175973598926}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -627,6 +673,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7691489175973598926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567786214371038515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &1028701169051091005
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,6 +698,7 @@ GameObject:
   - component: {fileID: 3423250473596765140}
   - component: {fileID: 2081725004737461845}
   - component: {fileID: 7092336669010560997}
+  - component: {fileID: 1481895965055512526}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -763,6 +824,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1481895965055512526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028701169051091005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &1054942349599611451
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +849,7 @@ GameObject:
   - component: {fileID: 4072632876659611607}
   - component: {fileID: 1778445416022124738}
   - component: {fileID: 8448989706130331407}
+  - component: {fileID: 7546217987759918825}
   m_Layer: 5
   m_Name: cost
   m_TagString: Untagged
@@ -899,6 +975,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7546217987759918825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054942349599611451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &1136490178597637024
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,6 +1000,7 @@ GameObject:
   - component: {fileID: 6693252841772534199}
   - component: {fileID: 7647460215905599267}
   - component: {fileID: 2843374788368802662}
+  - component: {fileID: 224798572590463066}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1035,6 +1126,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &224798572590463066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136490178597637024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &1278378030538412088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,6 +1272,7 @@ GameObject:
   - component: {fileID: 8274551343817639687}
   - component: {fileID: 1166118163731199097}
   - component: {fileID: 8772965125577860611}
+  - component: {fileID: 3636270059888972314}
   m_Layer: 5
   m_Name: stat_1
   m_TagString: Untagged
@@ -1292,6 +1398,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3636270059888972314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448718217569916347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &1669445233333890203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1424,6 +1544,7 @@ GameObject:
   - component: {fileID: 1317687478648829171}
   - component: {fileID: 2967497162516287365}
   - component: {fileID: 4304457592332782263}
+  - component: {fileID: 8112957457673032263}
   m_Layer: 5
   m_Name: stat_2
   m_TagString: Untagged
@@ -1549,6 +1670,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8112957457673032263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670543975575715717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &1829310167052649311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,6 +1695,7 @@ GameObject:
   - component: {fileID: 2999227460886417385}
   - component: {fileID: 3406425434423350958}
   - component: {fileID: 2796429439468977909}
+  - component: {fileID: 9116189839475293221}
   m_Layer: 5
   m_Name: stat_2
   m_TagString: Untagged
@@ -1685,6 +1821,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &9116189839475293221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829310167052649311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &2246867480444925660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,6 +2015,7 @@ GameObject:
   - component: {fileID: 6897734235077956112}
   - component: {fileID: 6559041927039467006}
   - component: {fileID: 3664295148606175900}
+  - component: {fileID: 8803022916415306016}
   m_Layer: 5
   m_Name: stat_2_name
   m_TagString: Untagged
@@ -1990,6 +2141,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8803022916415306016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2614761785474876117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &2672318923523581702
 GameObject:
   m_ObjectHideFlags: 0
@@ -2122,6 +2287,7 @@ GameObject:
   - component: {fileID: 5984915863083030249}
   - component: {fileID: 2007613601803319035}
   - component: {fileID: 4258330030809605197}
+  - component: {fileID: 8845716104588450235}
   m_Layer: 5
   m_Name: name
   m_TagString: Untagged
@@ -2247,6 +2413,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8845716104588450235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3014584629249352787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &3424576698001976375
 GameObject:
   m_ObjectHideFlags: 0
@@ -2258,6 +2438,7 @@ GameObject:
   - component: {fileID: 7258737256399127768}
   - component: {fileID: 2224754422606700772}
   - component: {fileID: 3058523205980596660}
+  - component: {fileID: 6331539559148230822}
   m_Layer: 5
   m_Name: stat_1
   m_TagString: Untagged
@@ -2383,6 +2564,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6331539559148230822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3424576698001976375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &3490344992297564665
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,6 +2589,7 @@ GameObject:
   - component: {fileID: 7930216339980154565}
   - component: {fileID: 8165033376431395642}
   - component: {fileID: 9054105593883414974}
+  - component: {fileID: 3967026033010579099}
   m_Layer: 5
   m_Name: stat_1_name
   m_TagString: Untagged
@@ -2519,6 +2715,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3967026033010579099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3490344992297564665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &3669383022374715972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2530,6 +2740,7 @@ GameObject:
   - component: {fileID: 8721693314023885355}
   - component: {fileID: 6833315904196253088}
   - component: {fileID: 8644157304842383810}
+  - component: {fileID: 8405159639383115536}
   m_Layer: 5
   m_Name: stat_2_name
   m_TagString: Untagged
@@ -2655,6 +2866,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8405159639383115536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3669383022374715972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &3684648171516157579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2666,6 +2891,7 @@ GameObject:
   - component: {fileID: 6954978216493614658}
   - component: {fileID: 2185332127859980730}
   - component: {fileID: 2685487322980600321}
+  - component: {fileID: 722949773555524222}
   m_Layer: 5
   m_Name: name
   m_TagString: Untagged
@@ -2791,6 +3017,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &722949773555524222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3684648171516157579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &3863042311930270673
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,6 +3042,7 @@ GameObject:
   - component: {fileID: 5656906848911027857}
   - component: {fileID: 8025257685372486073}
   - component: {fileID: 1957539349162705464}
+  - component: {fileID: 2670077810490015085}
   m_Layer: 5
   m_Name: cost
   m_TagString: Untagged
@@ -2927,6 +3168,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2670077810490015085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3863042311930270673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &3871557887557301260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2938,6 +3193,7 @@ GameObject:
   - component: {fileID: 921450333604504243}
   - component: {fileID: 2718207002424579314}
   - component: {fileID: 3766914025879078040}
+  - component: {fileID: 6611516154114718445}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3063,6 +3319,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6611516154114718445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3871557887557301260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &3990484145195157229
 GameObject:
   m_ObjectHideFlags: 0
@@ -3157,6 +3427,7 @@ GameObject:
   - component: {fileID: 2865421302500464183}
   - component: {fileID: 8560814798332117764}
   - component: {fileID: 3861361418757514859}
+  - component: {fileID: 6859214613852003954}
   m_Layer: 5
   m_Name: stat_1_name
   m_TagString: Untagged
@@ -3282,6 +3553,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6859214613852003954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4453783559983228488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &4837075689773892822
 GameObject:
   m_ObjectHideFlags: 0
@@ -3414,6 +3699,7 @@ GameObject:
   - component: {fileID: 1855026535390967747}
   - component: {fileID: 6012859214235951440}
   - component: {fileID: 7396397200541017064}
+  - component: {fileID: 5647067849650324646}
   m_Layer: 5
   m_Name: stat_2
   m_TagString: Untagged
@@ -3539,6 +3825,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5647067849650324646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5005048945122395634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &5525841267305072299
 GameObject:
   m_ObjectHideFlags: 0
@@ -3550,6 +3850,7 @@ GameObject:
   - component: {fileID: 4959836404343308105}
   - component: {fileID: 4731857579633190245}
   - component: {fileID: 1330523571648547219}
+  - component: {fileID: 135680092411265715}
   m_Layer: 5
   m_Name: stat_2
   m_TagString: Untagged
@@ -3675,6 +3976,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &135680092411265715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5525841267305072299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &5568701308600820468
 GameObject:
   m_ObjectHideFlags: 0
@@ -3769,6 +4084,7 @@ GameObject:
   - component: {fileID: 130390437439898433}
   - component: {fileID: 9157598187298618971}
   - component: {fileID: 4426378664183895958}
+  - component: {fileID: 2336573909316775655}
   m_Layer: 5
   m_Name: cost
   m_TagString: Untagged
@@ -3894,6 +4210,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2336573909316775655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5794665450359316254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &6006103883714986491
 GameObject:
   m_ObjectHideFlags: 0
@@ -3905,6 +4235,7 @@ GameObject:
   - component: {fileID: 5812917704145427408}
   - component: {fileID: 887933444854687851}
   - component: {fileID: 8207937143614128878}
+  - component: {fileID: 50770680930058222}
   m_Layer: 5
   m_Name: stat_2_name
   m_TagString: Untagged
@@ -4030,6 +4361,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &50770680930058222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6006103883714986491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &6212652813472927841
 GameObject:
   m_ObjectHideFlags: 0
@@ -4041,6 +4386,7 @@ GameObject:
   - component: {fileID: 6450548060333436324}
   - component: {fileID: 2750357845345421023}
   - component: {fileID: 1685865806276560385}
+  - component: {fileID: 2115170912087286930}
   m_Layer: 5
   m_Name: name
   m_TagString: Untagged
@@ -4166,6 +4512,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2115170912087286930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6212652813472927841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &6330705661394176199
 GameObject:
   m_ObjectHideFlags: 0
@@ -4177,6 +4537,7 @@ GameObject:
   - component: {fileID: 5425441964961992682}
   - component: {fileID: 4729079146458499822}
   - component: {fileID: 2076176434796864216}
+  - component: {fileID: 7737507050479363331}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4302,6 +4663,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7737507050479363331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6330705661394176199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &6418215893946405838
 GameObject:
   m_ObjectHideFlags: 0
@@ -4313,6 +4688,7 @@ GameObject:
   - component: {fileID: 8429426624109022694}
   - component: {fileID: 5750103478422334961}
   - component: {fileID: 6627671435311996074}
+  - component: {fileID: 9085601554961344914}
   m_Layer: 5
   m_Name: stat_1
   m_TagString: Untagged
@@ -4438,6 +4814,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &9085601554961344914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6418215893946405838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &6755813855650230248
 GameObject:
   m_ObjectHideFlags: 0
@@ -4570,6 +4960,7 @@ GameObject:
   - component: {fileID: 5047378431541998763}
   - component: {fileID: 4181788535559204891}
   - component: {fileID: 4810914164612614702}
+  - component: {fileID: 1236620689903159711}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4695,6 +5086,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1236620689903159711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7454820059445478012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &7460775759838024791
 GameObject:
   m_ObjectHideFlags: 0
@@ -4706,6 +5111,7 @@ GameObject:
   - component: {fileID: 2694169854855019998}
   - component: {fileID: 6669631550686835300}
   - component: {fileID: 6367686668626840465}
+  - component: {fileID: 2807257780741667106}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4831,6 +5237,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2807257780741667106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7460775759838024791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &7532797843389916649
 GameObject:
   m_ObjectHideFlags: 0
@@ -4963,6 +5383,7 @@ GameObject:
   - component: {fileID: 3383949879523844674}
   - component: {fileID: 5408269938832333306}
   - component: {fileID: 8560434018722497867}
+  - component: {fileID: 6744001051999098562}
   m_Layer: 5
   m_Name: stat_1_name
   m_TagString: Untagged
@@ -5088,6 +5509,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6744001051999098562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7702671064773425827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &7994430496133763492
 GameObject:
   m_ObjectHideFlags: 0
@@ -5220,6 +5655,7 @@ GameObject:
   - component: {fileID: 4337206919682543091}
   - component: {fileID: 6469573146049977253}
   - component: {fileID: 8676338817358307844}
+  - component: {fileID: 7276778050720874059}
   m_Layer: 5
   m_Name: cost
   m_TagString: Untagged
@@ -5345,6 +5781,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &7276778050720874059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8042980530223089165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &8142340374712902825
 GameObject:
   m_ObjectHideFlags: 0
@@ -5356,6 +5806,7 @@ GameObject:
   - component: {fileID: 4229339018571726293}
   - component: {fileID: 7486516646492070720}
   - component: {fileID: 3510555918280771541}
+  - component: {fileID: 9213017958437364465}
   m_Layer: 5
   m_Name: stat_1
   m_TagString: Untagged
@@ -5481,6 +5932,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &9213017958437364465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8142340374712902825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &8610510856263748337
 GameObject:
   m_ObjectHideFlags: 0
@@ -5575,6 +6040,7 @@ GameObject:
   - component: {fileID: 4337086239645493876}
   - component: {fileID: 1635730087981850697}
   - component: {fileID: 394975514030799026}
+  - component: {fileID: 5951715182802893656}
   m_Layer: 5
   m_Name: stat_1_name
   m_TagString: Untagged
@@ -5700,6 +6166,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5951715182802893656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8833186127164047679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a4f4a23042af77068ea0086c7aa8791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dyslexiaFriendlyFont: {fileID: 11400000, guid: b225af47f0d6df46b855ec3470b137c8, type: 2}
+  alwaysAdhdFriendly: 0
 --- !u!1 &9025869429579345335
 GameObject:
   m_ObjectHideFlags: 0
