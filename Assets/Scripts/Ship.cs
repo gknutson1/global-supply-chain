@@ -2,8 +2,32 @@ using System.Collections;
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class Ship : MonoBehaviour
-{
+public class Ship : MonoBehaviour {
+    public float upgradeSpeedMaxSpeedStep = 0.1f;
+    public float upgradeSpeedAccelStep = 0.1f;
+    public int upgradeSpeedLevelMax = 10;
+    public int upgradeSpeedLevelCur = 1;
+    public int upgradeSpeedCost = 10;
+    
+    public float upgradeTurnMaxTurnStep = 0.1f;
+    public float upgradeTurnAccelStep = 0.1f;
+    public int upgradeTurnLevelMax = 10;
+    public int upgradeTurnLevelCur = 1;
+    public int upgradeTurnCost = 10;
+    
+    public float upgradeAtkDmgStep = 0.1f;
+    public float upgradeAtkAccStep = 0.1f;
+    public int upgradeAtkLevelMax = 10;
+    public int upgradeAtkLevelCur = 1;
+    public int upgradeAtkCost = 10;
+    
+    public float upgradeDefHpStep = 0.1f;
+    public float upgradeDefEvasionStep = 0.1f;
+    public int upgradeDefLevelMax = 10;
+    public int upgradeDefLevelCur = 1;
+    public int upgradeDefCost = 10;
+    
+    
     public Color shipColor;
     public Sprite shipSprite;
 
