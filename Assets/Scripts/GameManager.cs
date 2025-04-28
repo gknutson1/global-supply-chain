@@ -1,3 +1,5 @@
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -38,7 +40,7 @@ public class GameManager : MonoBehaviour
 
         // For the first level, we need to immediately load level 0 ships, as there is no UpgradeManager to do so for us
         if (_persistentVariables.level == 0) {
-            _persistentVariables.ships.AddRange(_persistentVariables.level0NewShips);
+            _persistentVariables.ships = _persistentVariables.level0NewShips;
         }
 
         float distanceFrom = 5;
@@ -46,14 +48,18 @@ public class GameManager : MonoBehaviour
         pos.z = 0;
         
         var posChange = new Vector3(
-            Mathf.Cos((SpawnRotation * Mathf.Deg2Rad)+90) * distanceFrom,
-            Mathf.Sin((SpawnRotation * Mathf.Deg2Rad)+90) * distanceFrom,
+            Mathf.Cos(((SpawnRotation + 90) * Mathf.Deg2Rad)) * distanceFrom,
+            Mathf.Sin(((SpawnRotation + 90) * Mathf.Deg2Rad)) * distanceFrom,
             0
         );
+        
+        Debug.Log(posChange);
 
 
         foreach (Ship ship in _persistentVariables.ships) {
-            Instantiate(ship.gameObject, pos, Quaternion.Euler(0, 0, SpawnRotation));
+            Debug.Log("here");
+            GameObject obj = Instantiate(ship.gameObject, pos, Quaternion.Euler(0, 0, SpawnRotation), gameObject.transform);
+            obj.transform.SetParent(gameObject.transform);
             pos += posChange;
         }
     }

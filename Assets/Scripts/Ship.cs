@@ -43,8 +43,9 @@ public class Ship : MonoBehaviour
         set => SetSelected(value);
     }
 
-    private void SetSelected(bool state)
-    {
+    private void SetSelected(bool state) {
+        if (gameObject.CompareTag("EnemyShip")) state = false;
+            
         // If the new state is the same as the old, return early
         if (state == Selected) return;
 
@@ -119,6 +120,8 @@ public class Ship : MonoBehaviour
         // Do we need to start slowing down?
         float tgt = DifferenceToStop(TurnCur, TurnAccel) >= toMove ? -TurnMax : TurnMax;
         if (SpeedSnap >= distToDest) tgt = 0;
+        // Don't turn if we are less than 1 unit from our desired position
+        if (Vector3.Distance(position, target) < 1f) tgt = 0;
 
         // Increase or decrease the turn speed, based off of if we need to start slowing down
         TurnCur = Mathf.MoveTowards(TurnCur, tgt, TurnAccel * Time.deltaTime);
@@ -153,9 +156,14 @@ public class Ship : MonoBehaviour
     {
         if (!move) return;
         Vector3 position = gameObject.transform.position;
+<<<<<<< HEAD
 
         if (Mathf.Abs(remain) > Mathf.Lerp(45, 0, SpeedCur / SpeedMax) || distToDest / SpeedCur <= remain / TurnCur)
         {
+=======
+                
+        if (Mathf.Abs(remain) > Mathf.Lerp(45, 0, SpeedCur / SpeedMax) || distToDest / SpeedCur <= remain / TurnCur ||  Vector3.Distance(position, target) < 1f) {
+>>>>>>> refs/remotes/origin/main
             SpeedCur = Mathf.MoveTowards(SpeedCur, 0, SpeedAccel * Time.deltaTime);
         }
         else
