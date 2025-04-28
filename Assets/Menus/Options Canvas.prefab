@@ -733,6 +733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe09d35ff29c8d8c9929c6582f938cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 98097e96419e04b82a5df12fc9b9feea, type: 2}
   defaultValue: 1
 --- !u!1 &1230134241939614576
 GameObject:
@@ -1044,7 +1045,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6887413326223629277}
   m_Layer: 5
-  m_Name: SFX
+  m_Name: SFXVolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1279,7 +1280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2905351990722981323}
   m_Layer: 5
-  m_Name: Music
+  m_Name: MusicVolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1316,7 +1317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8312587560486982853}
   m_Layer: 5
-  m_Name: Master
+  m_Name: MasterVolume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1458,6 +1459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe09d35ff29c8d8c9929c6582f938cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 98097e96419e04b82a5df12fc9b9feea, type: 2}
   defaultValue: 1
 --- !u!1 &2481564464217275691
 GameObject:
@@ -2775,6 +2777,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe09d35ff29c8d8c9929c6582f938cc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 98097e96419e04b82a5df12fc9b9feea, type: 2}
   defaultValue: 1
 --- !u!1 &3946558339266364523
 GameObject:
