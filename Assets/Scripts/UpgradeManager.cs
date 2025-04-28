@@ -24,19 +24,19 @@ public class UpgradeManager : MonoBehaviour
         // Add any new ships for this level
         switch (++pv.level) {
             case 1:
-                pv.ships.AddRange(pv.level1NewShips);
+                pv.ships = pv.level1NewShips;
                 break;
             case 2:
-                pv.ships.AddRange(pv.level2NewShips);
+                pv.ships = pv.level2NewShips;
                 break;
             case 3:
-                pv.ships.AddRange(pv.level3NewShips);
+                pv.ships = pv.level3NewShips;
                 break;
             case 4:
-                pv.ships.AddRange(pv.level4NewShips);
+                pv.ships = pv.level4NewShips;
                 break;
             case 5:
-                pv.ships.AddRange(pv.level5NewShips);
+                pv.ships = pv.level5NewShips;
                 break;
         }
 
