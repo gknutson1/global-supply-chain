@@ -2,36 +2,38 @@ using System.Collections;
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class Ship : MonoBehaviour {
+public class Ship : MonoBehaviour
+{
     public float upgradeSpeedMaxSpeedStep = 0.1f;
     public float upgradeSpeedAccelStep = 0.1f;
     public int upgradeSpeedLevelMax = 10;
     public int upgradeSpeedLevelCur = 1;
     public int upgradeSpeedCost = 10;
-    
+
     public float upgradeTurnMaxTurnStep = 0.1f;
     public float upgradeTurnAccelStep = 0.1f;
     public int upgradeTurnLevelMax = 10;
     public int upgradeTurnLevelCur = 1;
     public int upgradeTurnCost = 10;
-    
+
     public float upgradeAtkDmgStep = 0.1f;
     public float upgradeAtkAccStep = 0.1f;
     public int upgradeAtkLevelMax = 10;
     public int upgradeAtkLevelCur = 1;
     public int upgradeAtkCost = 10;
-    
+
     public float upgradeDefHpStep = 0.1f;
     public float upgradeDefEvasionStep = 0.1f;
     public int upgradeDefLevelMax = 10;
     public int upgradeDefLevelCur = 1;
     public int upgradeDefCost = 10;
-    
-    
+
+
     public Color shipColor;
     public Sprite shipSprite;
 
     private LineRenderer _selectionRing;
+    GameManager _gameManager;
 
     private bool _selected = false;
 
@@ -96,24 +98,25 @@ public class Ship : MonoBehaviour {
     public float TurnSnap = 0.001f;
     public float TurnCur = 0f;
 
-    private float Rotate(Vector3 target) {
+    private float Rotate(Vector3 target)
+    {
         if (!move) return 180;
         Vector3 position = gameObject.transform.position;
-        
+
         float targetAngle = Mathf.Rad2Deg * Mathf.Atan2(target.y - position.y, target.x - position.x) + 180;
         float toMove = Mathf.DeltaAngle(gameObject.transform.eulerAngles.z, targetAngle);
         //print($"{position}, {target}, {targetAngle}");
 
         // If both our turning speed and our desired angle is below TurnSnap, stop processing rotation commands
         if (Mathf.Abs(toMove) <= TurnSnap && Mathf.Abs(TurnCur) <= TurnSnap)
-        {   
+        {
             // Just set our rotation to the target
             var qAngles = gameObject.transform.eulerAngles;
             qAngles.z = targetAngle;
             gameObject.transform.eulerAngles = qAngles;
             return toMove;
         }
-        
+
         // Do we need to start slowing down?
         float tgt = DifferenceToStop(TurnCur, TurnAccel) >= toMove ? -TurnMax : TurnMax;
         if (SpeedSnap >= distToDest) tgt = 0;
@@ -133,7 +136,8 @@ public class Ship : MonoBehaviour {
         return toMove;
     }
 
-    private void FixHealthBarLocation() {
+    private void FixHealthBarLocation()
+    {
         _healthBarCanvas.transform.eulerAngles = Vector3.zero;
 
         Vector3 position = gameObject.transform.position;
@@ -148,14 +152,16 @@ public class Ship : MonoBehaviour {
 
     public bool move = true;
 
-    private void Move(Vector3 target, float remain) {
+    private void Move(Vector3 target, float remain)
+    {
         if (!move) return;
         Vector3 position = gameObject.transform.position;
                 
         if (Mathf.Abs(remain) > Mathf.Lerp(45, 0, SpeedCur / SpeedMax) || distToDest / SpeedCur <= remain / TurnCur ||  Vector3.Distance(position, target) < 1f) {
             SpeedCur = Mathf.MoveTowards(SpeedCur, 0, SpeedAccel * Time.deltaTime);
         }
-        else {
+        else
+        {
             SpeedCur = Mathf.MoveTowards(
                 SpeedCur,
                 (DifferenceToStop(SpeedCur, SpeedAccel) >= distToDest || SpeedSnap >= distToDest) ? 0 : SpeedMax,
@@ -167,7 +173,7 @@ public class Ship : MonoBehaviour {
         position.y += Mathf.Sin(rotation * Mathf.Deg2Rad) * -1 * SpeedCur * Time.deltaTime;
         position.x += Mathf.Cos(rotation * Mathf.Deg2Rad) * -1 * SpeedCur * Time.deltaTime;
 
-        
+
         gameObject.transform.position = position;
     }
 
@@ -182,7 +188,7 @@ public class Ship : MonoBehaviour {
     void Start()
     {
         target = gameObject.transform.position;
-        
+
         _camera = Camera.main;
 
         gameObject.GetComponent<SpriteRenderer>().sprite = shipSprite;
@@ -210,6 +216,8 @@ public class Ship : MonoBehaviour {
         FixHealthBarLocation();
 
         StartCoroutine(Attack());
+
+        _gameManager = FindAnyObjectByType<GameManager>();
     }
 
     public Vector3 target;
@@ -221,22 +229,23 @@ public class Ship : MonoBehaviour {
         cam.z = 0;
         return cam;
     }
-    
-    
+
+
     // Pythagorean theorem
     private float distToDest;
 
-    void Update() {
+    void Update()
+    {
         if (Selected && Input.GetMouseButtonDown(0))
             Selected = false;
-        
+
         if (Selected && Input.GetMouseButtonDown(1))
             target = MousePosition();
-        
+
         //target = MousePosition();
         // If we are following a GameObject, replace our target with that object
         if (_objTarget is not null) target = _objTarget.transform.position;
-        
+
         var pos = gameObject.transform.position;
 
         distToDest = Mathf.Sqrt(Mathf.Abs(target.x - pos.x) + Mathf.Abs(target.y - pos.y));
@@ -278,7 +287,7 @@ public class Ship : MonoBehaviour {
                     var targetShip = collider.GetComponent<Ship>();
 
                     projectile.Fire(collider, ProjectileSprite, Random.value <= Accuracy * (1f - targetShip.Evasion), Strength);
-                    
+
                     attackCount++;
                 }
             }
@@ -293,7 +302,11 @@ public class Ship : MonoBehaviour {
     public void Hit(float damage)
     {
         _currentHealth -= damage;
-        _healthBar.UpdateHealthBar((float)_currentHealth / MaxHealth);
-        if (_currentHealth <= 0) Destroy(gameObject);   
+        _healthBar.UpdateHealthBar(_currentHealth / MaxHealth);
+        if (_currentHealth <= 0)
+        {
+            _gameManager.Invoke("OnShipDestroyed", 0.5f);
+            Destroy(gameObject);
+        }
     }
 }
