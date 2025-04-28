@@ -20,6 +20,26 @@ public class UpgradeManager : MonoBehaviour
     void Start()
     {
         pv = GameObject.Find("PersistentVariables").GetComponent<PersistentVariables>();
+        
+        // Add any new ships for this level
+        switch (++pv.level) {
+            case 1:
+                pv.ships.AddRange(pv.level1NewShips);
+                break;
+            case 2:
+                pv.ships.AddRange(pv.level2NewShips);
+                break;
+            case 3:
+                pv.ships.AddRange(pv.level3NewShips);
+                break;
+            case 4:
+                pv.ships.AddRange(pv.level4NewShips);
+                break;
+            case 5:
+                pv.ships.AddRange(pv.level5NewShips);
+                break;
+        }
+
         shipContainer = GameObject.Find("ship_container");
         float width = 10;
         

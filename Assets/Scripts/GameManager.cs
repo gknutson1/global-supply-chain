@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     private GameObject _selector;
 
     private PersistentVariables _persistentVariables;
+    
+    public Vector2 PlayerSpawn;
+    public float SpawnRotation;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,6 +35,27 @@ public class GameManager : MonoBehaviour
         _minBounds = tilemap.LocalToWorld(tilemap.localBounds.min);
         _maxBounds = tilemap.LocalToWorld(tilemap.localBounds.max);
         ScrollMax = Mathf.Min(ScrollMax, (_maxBounds.x - _minBounds.x) * Screen.height / Screen.width / 2, (_maxBounds.y - _minBounds.y) / 2);
+
+        // For the first level, we need to immediately load level 0 ships, as there is no UpgradeManager to do so for us
+        if (_persistentVariables.level == 0) {
+            _persistentVariables.ships.AddRange(_persistentVariables.level0NewShips);
+        }
+
+        float distanceFrom = 5;
+        Vector3 pos = PlayerSpawn;
+        pos.z = 0;
+        
+        var posChange = new Vector3(
+            Mathf.Cos((SpawnRotation * Mathf.Deg2Rad)+90) * distanceFrom,
+            Mathf.Sin((SpawnRotation * Mathf.Deg2Rad)+90) * distanceFrom,
+            0
+        );
+
+
+        foreach (Ship ship in _persistentVariables.ships) {
+            Instantiate(ship.gameObject, pos, Quaternion.Euler(0, 0, SpawnRotation));
+            pos += posChange;
+        }
     }
 
     /// Get position of the mouse as a unity coordinate (zeroed out)
