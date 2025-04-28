@@ -41,8 +41,9 @@ public class Ship : MonoBehaviour {
         set => SetSelected(value);
     }
 
-    private void SetSelected(bool state)
-    {
+    private void SetSelected(bool state) {
+        if (gameObject.CompareTag("EnemyShip")) state = false;
+            
         // If the new state is the same as the old, return early
         if (state == Selected) return;
 
