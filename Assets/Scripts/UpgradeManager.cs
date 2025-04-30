@@ -62,7 +62,6 @@ public class UpgradeManager : MonoBehaviour
     }
     
     public void Continue() {
-        pv.level++;
         SceneManager.LoadScene($"Story");
     }
 
